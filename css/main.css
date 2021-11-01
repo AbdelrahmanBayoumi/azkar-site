@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* transition: all ease 0.5s; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-color: #f5f7fe;
+  --light-blue: #5296cf;
+  --dark-primary: #33485d;
+  --bg-color: #f5f7fe;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  background-color: var(--bg-color);
+}
+
+/* -- General Classes */
+.flex {
+  display: flex;
+}
+.justify-content-center{
+  justify-content: center;
+}
+
+/* ---  */
+.navbar{
+  position: sticky; top: 0;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.26);
+}
+.navbar ul {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: var(--dark-primary);
+  color: white;
+  gap: 5px;
+  padding: 5px 30px 5px 10px;
+}
+.navbar li {
+  align-self: center;
+  list-style-type: none;
+}
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+.navbar-logo {
+  flex: 1;
+  font-size: 2rem;
+  font-weight: bold;
+  user-select: none;
+}
+.navbar-toggle {
+  display: none;
+}
+.navbar-links {
+  padding: 7px 20px;
+  cursor: pointer;
+}
+.navbar-links:hover {
+  background-color: var(--light-blue);
+  border-radius: 10px;
+}
+.navbar-img img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+}
+.lang {
+  background-color: #2737488a;
+  border-radius: 10px;
+}
+section {
+  padding: 200px;
+  background-color: var(--light-blue);
+  color: white;
+  text-align: center;
+}
+section:nth-child(2n-1) {
+  background-color: var(--dark-primary);
+}
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+  }
+  .navbar-toggle {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  .active {
+    display: block;
+  }
+}
