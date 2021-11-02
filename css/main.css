@@ -208,6 +208,11 @@ section {
   border-radius: 20px;
   min-width: 500px;
 }
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 /* .h-feature{
   display: flex;
   flex-direction: row;
