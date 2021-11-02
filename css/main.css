@@ -16,6 +16,8 @@ html {
   --light-blue: #5296cf;
   --dark-primary: #33485d;
   --bg-color: #f5f7fe;
+  --green: #28a745;
+  --teal: #20c997;
 }
 body {
   font-family: "Cairo", sans-serif;
@@ -40,7 +42,6 @@ body {
 .g-20 {
   gap: 20px;
 }
-
 /* ------ NavBar ------ */
 .navbar {
   position: sticky;
@@ -88,6 +89,16 @@ body {
   width: 30px;
   height: 30px;
   filter: invert(1);
+}
+.download-button {
+  text-align: center;
+  user-select: none;
+  color: #fff;
+  background-color: #5296cf85;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-family: "Cairo", Courier, monospace;
 }
 .lang {
   background-color: #2737488a;
@@ -212,13 +223,6 @@ section {
   width: 0;
   background: transparent;
 } */
-
-/* .h-feature{
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  justify-content: space-between;
-} */
 .feature-title {
   margin-bottom: 20px;
   text-align: center;
@@ -239,10 +243,26 @@ section {
 .feature-item-img {
   width: 25px;
 }
+.scroll {
+  transition: all ease 0.5s;
+}
+.slider-active {
+  transform: scale(1.05);
+}
 /* ------- */
 section:nth-child(2n-1) {
-  background-color: var(--light-blue);
-  color: white;
+  background-color: white;
+  color: var(--dark-primary);
+}
+
+footer {
+  margin-top: 30px;
+  background-color: var(--dark-primary);
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1050px) {

@@ -6,37 +6,29 @@ toggleButton.addEventListener('click', () => {
   }
 });
 
-function t() {
-  document.getElementById('download').scrollIntoView();
+function scrollToID(id) {
+  document.getElementById(id).scrollIntoView();
 }
 
-
-// const slider = document.querySelector(".feature-boxs");
+/* --- Features Scroll --- */
 const slider = document.querySelector(".scroll");
-// const preventClick = (e) => {
-//   e.preventDefault();
-//   e.stopImmediatePropagation();
-// }
 let isDown = false;
 let startX;
 let scrollLeft;
 
 slider.addEventListener("mousedown", e => {
   isDown = true;
-  slider.classList.add("active");
+  slider.classList.add("slider-active");
   startX = e.pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;
 });
-
-slider.addEventListener("mouseleave", () => {
+const mouseleave = () => {
   isDown = false;
-  slider.classList.remove("active");
-});
+  slider.classList.remove("slider-active");
+}
+slider.addEventListener("mouseleave", mouseleave);
 
-slider.addEventListener("mouseup", (e) => {
-  isDown = false;
-  slider.classList.remove("active");
-});
+slider.addEventListener("mouseup", mouseleave);
 
 slider.addEventListener("mousemove", e => {
   if (!isDown) return;
@@ -44,35 +36,4 @@ slider.addEventListener("mousemove", e => {
   const x = e.pageX - slider.offsetLeft;
   const walk = (x - startX) * 2;
   slider.scrollLeft = scrollLeft - walk;
-  console.log({ isDown, scrollLeft: scrollLeft - walk, walk, x });
 });
-
-// const slider = document.querySelector(".feature-boxs");
-// let isDown = false;
-// let startX;
-// let scrollLeft;
-
-// slider.addEventListener("mousedown", e => {
-//   console.log("mousedown");
-//   isDown = true;
-//   slider.classList.add("active");
-//   startX = e.pageX - slider.offsetLeft;
-//   scrollLeft = slider.scrollLeft;
-// });
-// slider.addEventListener("mouseleave", () => {
-//   isDown = false;
-//   slider.classList.remove("active");
-// });
-// slider.addEventListener("mouseup", () => {
-//   isDown = false;
-//   slider.classList.remove("active");
-// });
-// slider.addEventListener("mousemove", e => {
-//   console.log("mousemove()");
-//   if (!isDown) return;
-//   e.preventDefault();
-//   const x = e.pageX - slider.offsetLeft;
-//   const walk = x - startX;
-//   console.log("walk:", walk);
-//   slider.scrollLeft = scrollLeft - walk;
-// });
