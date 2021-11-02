@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">
-  <g id="Scroll-Icon" transform="translate(-0.5 -0.5)">
-    <path id="Path_47" data-name="Path 47" d="M63,33A30,30,0,1,1,33,3,30,30,0,0,1,63,33Z" fill="none" stroke="#33485d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
-    <path id="Path_48" data-name="Path 48" d="M12,18,23.5,29.5,35,18" transform="translate(9.499 15.312)" fill="none" stroke="#33485d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
-    <path id="Path_49" data-name="Path 49" d="M18,12V35" transform="translate(15 9.499)" fill="none" stroke="#33485d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65"><g id="Scroll-Icon" transform="translate(-0.5 -0.5)"><path id="Path_47" fill="none" stroke="#33485d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M63,33A30,30,0,1,1,33,3,30,30,0,0,1,63,33Z" data-name="Path 47"/><path id="Path_48" fill="none" stroke="#33485d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M12,18,23.5,29.5,35,18" data-name="Path 48" transform="translate(9.499 15.312)"/><path id="Path_49" fill="none" stroke="#33485d" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M18,12V35" data-name="Path 49" transform="translate(15 9.499)"/></g></svg>
