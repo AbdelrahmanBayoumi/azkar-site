@@ -9,24 +9,33 @@ toggleButton.addEventListener('click', () => {
 function t() {
   document.getElementById('download').scrollIntoView();
 }
-let viewport = document.getElementById('x');
-let content = document.getElementById('featuresContainer');
-new ScrollBooster({
-  viewport,
-  content,
-  bounce: false,
-  lockScrollOnDragDirection: "horizontal",
-  direction: 'horizontal',
-  scrollMode: "transform"
-})
-// new ScrollBooster({
 
-//   scrollMode: 'transform', // use CSS 'transform' property
-//   direction: 'horizontal', // allow only horizontal scrolling
-//   // emulateScroll: true, // scroll on wheel events
-//   bounce: false,
-//   // lockScrollOnDragDirection: "vertical",
-//   // preventDefaultOnEmulateScroll: 'vertical',
-//   // lockScrollOnDragDirection:'vertical'
-//   // pointerMode: 'all'
-// });
+const slider = document.querySelector(".feature-boxs");
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener("mousedown", e => {
+  console.log("mousedown");
+  isDown = true;
+  slider.classList.add("active");
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener("mouseleave", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+slider.addEventListener("mouseup", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+slider.addEventListener("mousemove", e => {
+  console.log("mousemove()");
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = x - startX;
+  console.log("walk:", walk);
+  slider.scrollLeft = scrollLeft - walk;
+});
