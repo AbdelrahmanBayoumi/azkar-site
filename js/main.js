@@ -9,3 +9,11 @@ toggleButton.addEventListener('click', () => {
 function t() {
   document.getElementById('download').scrollIntoView();  
 }
+
+new ScrollBooster({
+  viewport: document.getElementById('x'),
+  content:document.getElementById('featuresContainer'),
+  scrollMode: 'transform', // use CSS 'transform' property
+  direction: 'horizontal', // allow only horizontal scrolling
+  // emulateScroll: true, // scroll on wheel events
+});

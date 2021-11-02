@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="310" height="30.853" viewBox="0 0 310 30.853">
+  <g id="Star-Line" transform="translate(-731 -1221.498)">
+    <line id="Line_1" data-name="Line 1" x1="129" transform="translate(731 1236.498)" fill="none" stroke="#33485d" stroke-width="4"/>
+    <line id="Line_2" data-name="Line 2" x1="128" transform="translate(913 1236.498)" fill="none" stroke="#33485d" stroke-width="4"/>
+    <path id="Icon_awesome-star" data-name="Icon awesome-star" d="M15.829,1.072,11.9,9.05l-8.8,1.283a1.929,1.929,0,0,0-1.066,3.29l6.369,6.206L6.888,28.6a1.927,1.927,0,0,0,2.8,2.03l7.875-4.139,7.875,4.139a1.928,1.928,0,0,0,2.8-2.03l-1.506-8.767,6.369-6.206a1.929,1.929,0,0,0-1.066-3.29l-8.8-1.283L19.288,1.072a1.93,1.93,0,0,0-3.458,0Z" transform="translate(868.058 1221.499)" fill="#33485d"/>
+  </g>
+</svg>

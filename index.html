@@ -16,7 +16,7 @@
   <link href="css/main.css" rel="stylesheet">
   <!-- favicon -->
   <link rel="icon" type="image/png" href="images/Logo - Circle.svg" />
-
+  <script src="https://unpkg.com/scrollbooster@2/dist/scrollbooster.min.js"></script>
   <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"> -->
 </head>
@@ -36,7 +36,7 @@
       <li class="navbar-links" onclick="t()">تحميل</li>
       <li class="navbar-links">تواصل معنا</li>
       <li class="navbar-links navbar-img">
-        <a class="flex justify-content-center" href="#" target="_blank"><img src="images/github.svg" alt="GitHub"></a>
+        <a class="hbox justify-content-center" href="#" target="_blank"><img src="images/github.svg" alt="GitHub"></a>
       </li>
       <li class="navbar-links navbar-img lang">EN <img src="images/world.svg" alt="globe"></li>
     </ul>
@@ -65,16 +65,79 @@
       <a class="scroll-down-icon" href="#features"><img src="images/Scroll-Icon.svg" alt="Scroll-Icon"></a>
     </header>
 
-    <section id="features">
-      <h2>features</h2>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est ullam culpa eos explicabo quo
-      similique tenetur, omnis iste deserunt nostrum repellat doloribus nesciunt sequi, modi sit ut. Fugiat incidunt
-      dolore tempora fugit accusamus ipsa sed cupiditate quasi reiciendis possimus ea nobis magnam doloribus
-      necessitatibus dicta, autem natus, cumque voluptatum unde! Eveniet voluptas facilis distinctio nisi. Delectus,
-      consectetur? Deserunt id fuga facere architecto debitis dolores rerum ipsam libero iste sit, esse iure vitae
-      necessitatibus perspiciatis voluptate. Nihil, quae? Officiis, voluptatem quasi nisi facilis saepe rerum, illum
-      molestias mollitia, assumenda non optio excepturi tenetur debitis. Autem repellendus ullam molestias esse quo
-      facilis?
+    <section id="features" class="first-section">
+      <!-- Section Title -->
+      <h2 class="section-title">المميزات</h2>
+      <div class="star-line"><img src="images/Star-Line.svg" alt="Star-Line"></div>
+      <!-- Section Content -->
+
+      <div id="x">
+        <div id="featuresContainer" class="feature-boxs">
+          <div class="feature-box">
+            <h3 class="feature-title" dir="auto">ظهور إشعارات بذكر او دعاء كل فترة محددة</h3>
+            <img style="width: 100%;" src="images/notification-screen.png" alt="notification-screenshot">
+            <div class="feature-list">
+              <p class="feature-item" dir="auto">
+                <img class="feature-item-img" src="images/time.svg" alt="time">
+                إمكانية تعديل الفترة التي يظهر فيها الإشعار
+              </p>
+              <p class="feature-item" dir="auto">
+                <img class="feature-item-img" src="images/check-circle2.svg" alt="check">
+                سهولة تغيير مكان ظهور الإشعار
+              </p>
+              <p class="feature-item" dir="auto">
+                <img class="feature-item-img" src="images/sound.svg" alt="sound">
+                إيقاف أو تغيير صوت التنبيه
+              </p>
+              <p class="feature-item" dir="auto">
+                <img class="feature-item-img" src="images/gear.svg" alt="gear">
+                إمكانية إضافة أو حذف أو تعديل الأذكار
+              </p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <h3 class="feature-title" dir="auto">
+              مواقيت الصلاة
+            </h3>
+            <img style="width: 100%;" src="images/Program.png" alt="notification-screenshot">
+            <div class="feature-list">
+              <p class="feature-item" dir="auto">
+                <img class="feature-item-img" src="images/time.svg" alt="time">
+                ضبط المواقيت حسب الموقع الجغرافي
+              </p>
+              <p class="feature-item" dir="auto">
+                <img class="feature-item-img" src="images/check-circle2.svg" alt="check">
+                إظهار الوقت المتبقي للصلاة القادمة
+              </p>
+              <p class="feature-item" dir="auto">
+                <img class="feature-item-img" src="images/sound.svg" alt="sound">
+                إيقاف أو تغيير صوت المؤذن
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-box">
+            <h3 class="feature-title" dir="auto">
+              أذكار الصباح والمساء
+            </h3>
+            <img style="width: 100%;" src="images/timedAzkar.png" alt="notification-screenshot">
+            <div class="feature-list">
+              <p class="feature-item" dir="auto">
+                <img class="feature-item-img" src="images/time.svg" alt="time">
+                تفعيل أو إيقاف إشعارات التذكير بهما
+              </p>
+              <p class="feature-item" dir="auto">
+                <img class="feature-item-img" src="images/check-circle2.svg" alt="check">
+                إيقاف أو تغيير صوت التنبيه
+              </p>
+              <p class="feature-item" dir="auto">
+                <img class="feature-item-img" src="images/sound.svg" alt="sound">
+                تكبير وتصغير حجم الخط
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="download">
       <h2>download</h2>

@@ -23,8 +23,13 @@ body {
 }
 
 /* -- General Classes */
-.flex {
+.vbox {
   display: flex;
+  flex-direction: column;
+}
+.hbox {
+  display: flex;
+  flex-direction: row;
 }
 .justify-content-center {
   justify-content: center;
@@ -161,16 +166,78 @@ header::after {
 .scroll-down-icon img {
   width: 100%;
 }
-/* ----------------- */
+/* --------- */
+.star-line {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.star-line img {
+  width: 200px;
+}
+/* ------- section --------- */
+#x{
+  overflow: hidden;
+}
 section {
-  padding: 200px 30px;
-  background-color: var(--light-blue);
-  color: white;
+  background-color: var(--bg-color);
+  color: var(--dark-primary);
+  padding: 30px;
+}
+.section-title {
+  font-size: 2rem;
   text-align: center;
 }
-section:nth-child(2n) {
-  background-color: var(--bg-color);
-  color: #000;
+.first-section {
+  padding-top: 70px;
+}
+#features{
+  padding-right: 0px;
+}
+.feature-boxs{
+  display: flex;
+  gap: 20px;
+  padding: 20px 0px;
+  width: 100%;
+}
+.feature-box {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 2px 3px 10px #00000029;
+  border-radius: 20px;
+  min-width: 500px;
+}
+/* .h-feature{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+} */
+.feature-title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.feature-item {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  font-size: 1.1rem;
+}
+.feature-item-img {
+  width: 25px;
+}
+/* ------- */
+section:nth-child(2n-1) {
+  background-color: var(--light-blue);
+  color: white;
 }
 
 @media (max-width: 1050px) {
@@ -194,7 +261,7 @@ section:nth-child(2n) {
     order: 1;
     position: relative;
     z-index: 1;
-    padding: 10px;  
+    padding: 10px;
     font-size: 1rem;
   }
   .header-img {
@@ -202,6 +269,10 @@ section:nth-child(2n) {
   }
   .header-img img {
     width: 100%;
+  }
+  .feature-box{
+    min-width: 350px;
+    /* width: 300px; */
   }
 }
 @media (max-width: 620px) {
