@@ -7,13 +7,26 @@ toggleButton.addEventListener('click', () => {
 });
 
 function t() {
-  document.getElementById('download').scrollIntoView();  
+  document.getElementById('download').scrollIntoView();
 }
-
+let viewport = document.getElementById('x');
+let content = document.getElementById('featuresContainer');
 new ScrollBooster({
-  viewport: document.getElementById('x'),
-  content:document.getElementById('featuresContainer'),
-  scrollMode: 'transform', // use CSS 'transform' property
-  direction: 'horizontal', // allow only horizontal scrolling
-  // emulateScroll: true, // scroll on wheel events
-});
+  viewport,
+  content,
+  bounce: false,
+  lockScrollOnDragDirection: "horizontal",
+  direction: 'horizontal',
+  scrollMode: "transform"
+})
+// new ScrollBooster({
+
+//   scrollMode: 'transform', // use CSS 'transform' property
+//   direction: 'horizontal', // allow only horizontal scrolling
+//   // emulateScroll: true, // scroll on wheel events
+//   bounce: false,
+//   // lockScrollOnDragDirection: "vertical",
+//   // preventDefaultOnEmulateScroll: 'vertical',
+//   // lockScrollOnDragDirection:'vertical'
+//   // pointerMode: 'all'
+// });
