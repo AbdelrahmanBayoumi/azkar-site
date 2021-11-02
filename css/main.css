@@ -177,7 +177,7 @@ header::after {
   width: 200px;
 }
 /* ------- section --------- */
-#x{
+#x {
   overflow: hidden;
 }
 section {
@@ -192,10 +192,10 @@ section {
 .first-section {
   padding-top: 70px;
 }
-#features{
+#features {
   padding-right: 0px;
 }
-.feature-boxs{
+.feature-boxs {
   display: flex;
   gap: 20px;
   padding: 20px 0px;
@@ -209,8 +209,8 @@ section {
   min-width: 500px;
 }
 ::-webkit-scrollbar {
-  width: 0;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0;
+  background: transparent;
 }
 
 /* .h-feature{
@@ -275,8 +275,11 @@ section:nth-child(2n-1) {
   .header-img img {
     width: 100%;
   }
-  .feature-box{
-    min-width: 350px;
+  #features {
+    padding-left: 10px;
+  }
+  .feature-box {
+    min-width: 340px;
     /* width: 300px; */
   }
 }
