@@ -208,10 +208,10 @@ section {
   border-radius: 20px;
   min-width: 500px;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0;
   background: transparent;
-}
+} */
 
 /* .h-feature{
   display: flex;
