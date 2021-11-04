@@ -225,6 +225,9 @@ body {
   user-select: none;
   cursor: pointer;
 }
+.navbar-logo h1{
+  font-size: 2rem;
+}
 .navbar-toggle {
   display: none;
   cursor: pointer;
