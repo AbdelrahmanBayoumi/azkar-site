@@ -37,3 +37,11 @@ slider.addEventListener("mousemove", e => {
   const walk = (x - startX) * 2;
   slider.scrollLeft = scrollLeft - walk;
 });
+
+/* --- Download Section --- */
+if (navigator.userAgent.indexOf("WOW64") != -1 ||
+  navigator.userAgent.indexOf("Win64") != -1) {
+  console.log("This is a 64 bit OS");
+} else {
+  console.log("Not a 64 bit OS");
+}
