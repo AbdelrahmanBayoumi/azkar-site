@@ -41,7 +41,7 @@ slider.addEventListener("mousemove", e => {
 /* --- Download Section --- */
 if (navigator.userAgent.indexOf("WOW64") != -1 ||
   navigator.userAgent.indexOf("Win64") != -1) {
-  console.log("This is a 64 bit OS");
+  console.log("This is a 64-bit OS");
 } else {
-  console.log("Not a 64 bit OS");
+  console.log("Not a 64-bit OS");
 }
