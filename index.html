@@ -11,13 +11,28 @@
     With notification for random Azkar that pops-up in specific time 💬.">
   <meta name="author" content="Abdelrahman Bayoumi">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Azkar - أذكار" />
+  <meta property="og:locale" content="ar_AR" />
+  <meta property="og:locale:alternate" content="ar_AR" />
+  <meta property="og:url" content="https://www.abdelrahmanbayoumi.ml/azkar-site" />
+  <meta property="og:title" content="Azkar - أذكار" />
+  <meta property="og:description" content=""
+  برنامج سطح مكتب يساعدك على: (معرفة مواقيت الصلاة - قراءة أذكار الصباح و المساء مع التذكير بها - ظهور إشعارات بذكر او دعاء عشوائي كل فترة محددة)
+  Desktop Application 💻 for:
+  Calculating Muslim prayer times 🕌
+  Morning and Nights Azkar with reminder 🤲
+  With notification for random Azkar that pops-up in specific time 💬."" />
+  <meta property="og:image" content="https://www.abdelrahmanbayoumi.ml/azkar-site/images/logo.png" />
+  <link rel="apple-touch-icon" href="https://www.abdelrahmanbayoumi.ml/azkar-site/images/logo.png">
+  <meta property="og:image:width" content="256" />
+  <meta property="og:image:height" content="256" />
   <title>Azkar - أذكار</title>
   <!-- main CSS -->
   <link href="css/main.css" rel="stylesheet">
   <!-- favicon -->
   <link rel="icon" type="image/png" href="images/Logo - Circle.svg" />
-  <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"> -->
 </head>
 
 <body id="top">
@@ -34,15 +49,16 @@
       <li class="navbar-links" onclick="scrollToID('features')">المميزات</li>
       <li class="navbar-links" onclick="scrollToID('contact')">تواصل معنا</li>
       <li class="navbar-links navbar-img">
-        <a class="hbox justify-content-center" href="https://github.com/AbdelrahmanBayoumi/Azkar-App"
-          target="_blank"><img src="images/github.svg" alt="GitHub" loading="lazy"></a>
+        <a class="hbox justify-content-center" href="https://github.com/AbdelrahmanBayoumi/Azkar-App" target="_blank">
+          <!-- <img src="images/github.svg" alt="GitHub" loading="lazy"> -->
+          <i class="icon-github"></i>
+        </a>
       </li>
       <li class="navbar-links download-button" onclick="scrollToID('download')" dir="auto">
         تحميل
         <i style="padding-right: 10px;font-size: 25px;" class="icon-download"></i>
       </li>
-      <li class="navbar-links navbar-img lang" style="display: none;">EN <img src="images/world.svg" alt="globe"
-          loading="lazy"></li>
+      <li class="navbar-links navbar-img lang"><img src="images/world.svg" alt="globe" loading="lazy"></li>
     </ul>
   </nav>
 
@@ -75,8 +91,10 @@
           قراءة أذكار الصباح والمساء مع التذكير بها
         </p>
       </div>
-      <a class="scroll-down-icon" onclick="scrollToID('features')"><img src="images/Scroll-Icon.svg" alt="Scroll-Icon"
-          loading="lazy"></a>
+      <a class="scroll-down-icon" style="cursor: pointer;" onclick="scrollToID('features')">
+        <!-- <img src="images/Scroll-Icon.svg" alt="Scroll-Icon" loading="lazy"> -->
+        <i class="icon-arrow-down-circle"></i>
+      </a>
     </header>
 
     <section id="features" class="first-section">
@@ -95,15 +113,18 @@
               إمكانية تعديل الفترة التي يظهر فيها الإشعار
             </p>
             <p class="feature-item" dir="auto">
-              <img class="feature-item-img" src="images/check-circle2.svg" alt="check" loading="lazy">
+              <i class="icon-check-circle"></i>
+              <!-- <img class="feature-item-img" src="images/check-circle2.svg" alt="check" loading="lazy"> -->
               سهولة تغيير مكان ظهور الإشعار
             </p>
             <p class="feature-item" dir="auto">
-              <img class="feature-item-img" src="images/sound.svg" alt="sound" loading="lazy">
+              <i class="icon-volume"></i>
+              <!-- <img class="feature-item-img" src="images/sound.svg" alt="sound" loading="lazy"> -->
               إيقاف أو تغيير صوت التنبيه
             </p>
             <p class="feature-item" dir="auto">
-              <img class="feature-item-img" src="images/gear.svg" alt="gear" loading="lazy">
+              <!-- <img class="feature-item-img" src="images/gear.svg" alt="gear" loading="lazy"> -->
+              <i class="icon-gear"></i>
               إمكانية إضافة أو حذف أو تعديل الأذكار
             </p>
           </div>
@@ -115,15 +136,18 @@
           <img style="width: 100%;" src="images/Program.png" alt="notification-screenshot" loading="lazy">
           <div class="feature-list">
             <p class="feature-item" dir="auto">
-              <img class="feature-item-img" src="images/location.svg" alt="time" loading="lazy">
+              <!-- <img class="feature-item-img" src="images/location.svg" alt="time" loading="lazy"> -->
+              <i class="icon-location"></i>
               ضبط المواقيت حسب الموقع الجغرافي
             </p>
             <p class="feature-item" dir="auto">
-              <img class="feature-item-img" src="images/time.svg" alt="check" loading="lazy">
+              <!-- <img class="feature-item-img" src="images/time.svg" alt="check" loading="lazy"> -->
+              <i class="icon-clock"></i>
               إظهار الوقت المتبقي للصلاة القادمة
             </p>
             <p class="feature-item" dir="auto">
-              <img class="feature-item-img" src="images/sound.svg" alt="sound" loading="lazy">
+              <!-- <img class="feature-item-img" src="images/sound.svg" alt="sound" loading="lazy"> -->
+              <i class="icon-volume"></i>
               إيقاف أو تغيير صوت المؤذن
             </p>
           </div>
@@ -136,15 +160,18 @@
           <img style="width: 100%;" src="images/timedAzkar.png" alt="notification-screenshot" loading="lazy">
           <div class="feature-list">
             <p class="feature-item" dir="auto">
-              <img class="feature-item-img" src="images/time.svg" alt="time" loading="lazy">
+              <!-- <img class="feature-item-img" src="images/time.svg" alt="time" loading="lazy"> -->
+              <i class="icon-clock"></i>
               تفعيل أو إيقاف إشعارات التذكير بهما
             </p>
             <p class="feature-item" dir="auto">
-              <img class="feature-item-img" src="images/sound.svg" alt="check" loading="lazy">
+              <!-- <img class="feature-item-img" src="images/sound.svg" alt="check" loading="lazy"> -->
+              <i class="icon-volume"></i>
               إيقاف أو تغيير صوت التنبيه
             </p>
             <p class="feature-item" dir="auto">
-              <img class="feature-item-img" src="images/gear.svg" alt="sound" loading="lazy">
+              <!-- <img class="feature-item-img" src="images/gear.svg" alt="sound" loading="lazy"> -->
+              <i class="icon-gear"></i>
               تكبير وتصغير حجم الخط
             </p>
           </div>
