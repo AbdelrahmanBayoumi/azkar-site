@@ -1,5 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
 
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?txqw5y");
+  src: url("../fonts/icomoon.eot?txqw5y#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?txqw5y") format("truetype"),
+    url("../fonts/icomoon.woff?txqw5y") format("woff"),
+    url("../fonts/icomoon.svg?txqw5y#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-windows:before {
+  content: "\e901";
+}
+.icon-download:before {
+  content: "\e902";
+}
+.icon-check-circle:before {
+  content: "\e900";
+}
+.icon-clock:before {
+  content: "\e94e";
+}
+
+/* ------------- */
 * {
   margin: 0;
   padding: 0;
@@ -100,6 +152,8 @@ body {
   border-radius: 10px;
   font-size: 1.1rem;
   font-family: "Cairo", Courier, monospace;
+  display: flex;
+  align-items: center;
 }
 .lang {
   background-color: #2737488a;
@@ -262,6 +316,9 @@ section {
 #download {
   background-color: white;
   color: var(--dark-primary);
+}
+#download,
+#contact {
   padding-top: 90px;
 }
 .download-section {
@@ -271,9 +328,6 @@ section {
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-.download-section img {
-  width: 50%;
 }
 .platform-box {
   background-color: var(--bg-color);
@@ -287,6 +341,7 @@ section {
   text-align: center;
   align-items: center;
 
+  height: 339px;
   width: 300px;
   margin: 30px 30px;
   justify-content: space-between;
@@ -296,10 +351,14 @@ section {
 .platform-name {
   font-size: 1.3em;
   font-weight: 600;
+  flex: 1;
 }
 
 .platform-name > span {
   font-size: 0.8em;
+}
+.platform-box a {
+  text-decoration: none;
 }
 .platform-box button {
   text-align: center;
@@ -312,85 +371,126 @@ section {
   font-family: "Cairo", Courier, monospace;
   padding: 10px;
 
-  min-width:200px;
-
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .platform-box button:hover {
   background-color: green;
 }
-.first-platform {
-  order: 1;
-}
-.platform-box-highlighted {
-  /* border: 1px solid  */
-  box-shadow: inset 0 0 0 3px #5c7a97;
-  border-width: 3px;
-  order: 2;
-}
-.draw {
-  /* border: 1px solid var(--green); */
-  overflow: hidden;
-  position: relative;
-}
-.draw::before,
-.draw::after {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  border: 4px solid transparent;
-  border-radius: 15px;
-  width: 0;
-  height: 0;
-}
-.draw::before {
-  top: 0;
-  left: 0;
-  border-top-color: var(--dark-primary);
-  border-right-color: var(--dark-primary);
-  animation: border 5s infinite;
-}
-.draw::after {
-  bottom: 0;
-  right: 0;
-  animation: border 5s 3s infinite, borderColor 5s 3s infinite;
+.number-of-downloads {
+  font-size: 0.8em;
+  display: none;
 }
 
-@keyframes border {
-  0% {
-    width: 0;
-    height: 0;
-  }
-  25% {
-    width: 100%;
-    height: 0;
-  }
-  50% {
-    width: 100%;
-    height: 100%;
-  }
-  100% {
-    width: 100%;
-    height: 100%;
-  }
+.number-of-downloads > span {
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
 }
-@keyframes borderColor {
-  0% {
-    border-bottom-color: var(--dark-primary);
-    border-left-color: var(--dark-primary);
-  }
-  50% {
-    border-bottom-color: var(--dark-primary);
-    border-left-color: var(--dark-primary);
-  }
-  51% {
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-  }
-  100% {
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-  }
+#version {
+  font-weight: bold;
 }
+/* --- Contact Us --- */
+form {
+  border-top: 2px solid #5ea4f3;
+  background-color: #fff;
+  max-width: 500px;
+  margin: auto;
+  padding: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.075);
+}
+.alert {
+  cursor: pointer;
+}
+.alert button.close {
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.75rem 1.25rem;
+  color: inherit;
+}
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: opacity 0.15s linear;
+}
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+.required-star {
+  color: red;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  font-weight: 600;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1 px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+}
+/* --- Footer --- */
 footer {
   margin-top: 30px;
   background-color: var(--dark-primary);
@@ -454,13 +554,96 @@ footer {
     text-align: center;
   }
   .active {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .lang.active {
     display: flex;
     justify-content: center;
   }
-  #download {
+  #download,
+  #contact {
     padding-top: 75px;
   }
 }
+@media (max-width: 400px) {
+  form {
+    padding: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .header-img img {
+    width: 60%;
+  }
+}
+/* 
+.platform-box-highlighted {
+  box-shadow: inset 0 0 0 3px #5c7a97;
+  border-width: 3px;
+  order: 2;
+}
+.draw {
+  overflow: hidden;
+  position: relative;
+}
+.draw::before,
+.draw::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: 4px solid transparent;
+  border-radius: 15px;
+  width: 0;
+  height: 0;
+}
+.draw::before {
+  top: 0;
+  left: 0;
+  border-top-color: var(--dark-primary);
+  border-right-color: var(--dark-primary);
+  animation: border 5s infinite;
+}
+.draw::after {
+  bottom: 0;
+  right: 0;
+  animation: border 5s 3s infinite, borderColor 5s 3s infinite;
+}
+
+@keyframes border {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  25% {
+    width: 100%;
+    height: 0;
+  }
+  50% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes borderColor {
+  0% {
+    border-bottom-color: var(--dark-primary);
+    border-left-color: var(--dark-primary);
+  }
+  50% {
+    border-bottom-color: var(--dark-primary);
+    border-left-color: var(--dark-primary);
+  }
+  51% {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  100% {
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
+ */

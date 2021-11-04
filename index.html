@@ -16,8 +16,8 @@
   <link href="css/main.css" rel="stylesheet">
   <!-- favicon -->
   <link rel="icon" type="image/png" href="images/Logo - Circle.svg" />
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"> -->
 </head>
 
 <body id="top">
@@ -39,7 +39,7 @@
       </li>
       <li class="navbar-links download-button" onclick="scrollToID('download')" dir="auto">
         تحميل
-        <i style="padding-right: 10px;font-size: 25px;" class="fas fa-download fa-lg"></i>
+        <i style="padding-right: 10px;font-size: 25px;" class="icon-download"></i>
       </li>
       <li class="navbar-links navbar-img lang" style="display: none;">EN <img src="images/world.svg" alt="globe"
           loading="lazy"></li>
@@ -47,9 +47,9 @@
   </nav>
 
   <main>
-    <header>
+    <header onclick="scrollToID('download')">
       <div class="header-img">
-        <img src="images/program & notification 01.png" alt="program & notification"  loading="lazy">
+        <img src="images/program & notification 01.png" alt="program & notification" loading="lazy">
       </div>
       <!-- <div class="download-btn-container">
         <button dir="auto" onclick="scrollToID('download')">
@@ -61,21 +61,21 @@
         <p>برنامج سطح مكتب يساعدك على</p>
         <p class="header-feature">
           <!-- <img src="images/check-circle.svg" alt="check"> -->
-          <i class="fas fa-check-circle"></i>
+          <i class="icon-check-circle"></i>
           ظهور إشعارات بذكر او دعاء كل فترة محددة
         </p>
         <p class="header-feature">
           <!-- <img src="images/check-circle.svg" alt="check"> -->
-          <i class="fas fa-check-circle"></i>
+          <i class="icon-check-circle"></i>
           معرفة مواقيت الصلاة حسب المنطقة الجغرافية
         </p>
         <p class="header-feature">
           <!-- <img src="images/check-circle.svg" alt="check"> -->
-          <i class="fas fa-check-circle"></i>
+          <i class="icon-check-circle"></i>
           قراءة أذكار الصباح والمساء مع التذكير بها
         </p>
       </div>
-      <a class="scroll-down-icon" href="#features"><img src="images/Scroll-Icon.svg" alt="Scroll-Icon"
+      <a class="scroll-down-icon" onclick="scrollToID('features')"><img src="images/Scroll-Icon.svg" alt="Scroll-Icon"
           loading="lazy"></a>
     </header>
 
@@ -91,7 +91,7 @@
           <div class="feature-list">
             <p class="feature-item" dir="auto">
               <!-- <img class="feature-item-img" src="images/time.svg" alt="time"> -->
-              <i class="far fa-clock"></i>
+              <i class="icon-clock"></i>
               إمكانية تعديل الفترة التي يظهر فيها الإشعار
             </p>
             <p class="feature-item" dir="auto">
@@ -155,14 +155,14 @@
       <!-- Section Title -->
       <h2 class="section-title">تحميل</h2>
       <div class="star-line"><img src="images/Star-Line.svg" alt="Star-Line" loading="lazy"></div>
-      <p style="text-align: center;" dir="auto">الإصدار رقم: <span style="font-weight: bold;">1.0.1</span></p>
+      <p style="text-align: center;" dir="auto">الإصدار رقم: <span id="version">0.0.0</span></p>
       <div class="download-section">
-        <div class="platform-box first-platform">
-          <i style="font-size: 85px;color: #0063C6;" class="fab fa-windows fa-lg"></i>
-          <p class="platform-name">32-bit Windows <br><br></p>
+        <div class="platform-box">
+          <i style="font-size: 85px;color: #0063C6;" class="icon-windows"></i>
+          <p class="platform-name">32-bit Windows</p>
           <a href="https://www.google.com.eg/" target="_blank">
             <button>
-              <i style="padding-right: 10px;font-size: 30px;" class="fas fa-download fa-lg"></i>
+              <i style="padding-right: 10px;font-size: 25px;" class="icon-download"></i>
               Download (64-bit)
             </button>
           </a>
@@ -170,27 +170,28 @@
         </div>
 
         <div class="platform-box">
-          <i style="font-size: 85px;color: #0063C6;" class="fab fa-windows fa-lg"></i>
-          <p class="platform-name">64-bit Windows <br><br></p>
+          <i style="font-size: 85px;color: #0063C6;" class="icon-windows"></i>
+          <p class="platform-name">64-bit Windows</p>
           <a href="https://www.google.com.eg/" target="_blank">
             <button>
-              <i style="padding-right: 10px;font-size: 30px;" class="fas fa-download fa-lg"></i>
+              <i style="padding-right: 10px;font-size: 25px;" class="icon-download"></i>
               Download (32-bit)
             </button>
           </a>
-          <p class="number-of-downloads">عدد التحميلات: <span id="win_exe64_counter">0</span></p>
+          <p class="number-of-downloads">عدد التحميلات: <span id="win_exe32_counter">0</span></p>
         </div>
 
-        <div style="order: 3;" class="platform-box">
-          <i style="font-size: 85px;color: #0063C6;" class="fab fa-java fa-lg"></i>
+        <div class="platform-box">
+          <img src="images/jar.webp" alt="jar" width="85" height="85" loading="lazy">
+          <!-- <i style="font-size: 85px;color: #0063C6;" class="fab fa-java fa-lg"></i> -->
           <p class="platform-name">Portable Jar (No JRE) <br><span>JRE 8 required</span></p>
           <a href="https://www.google.com.eg/" target="_blank">
             <button>
-              <i style="padding-right: 10px;font-size: 30px;" class="fas fa-download fa-lg"></i>
+              <i style="padding-right: 10px;font-size: 25px ;" class="icon-download"></i>
               Download (.zip)
             </button>
           </a>
-          <p class="number-of-downloads">عدد التحميلات: <span id="win_exe64_counter">0</span></p>
+          <p class="number-of-downloads">عدد التحميلات: <span id="jar_counter">0</span></p>
         </div>
       </div>
 
@@ -198,10 +199,46 @@
     <section id="contact">
       <!-- Section Title -->
       <h2 class="section-title">تواصل معنا</h2>
-      <div class="star-line"><img src="images/Star-Line.svg" alt="Star-Line"  loading="lazy"></div>
+      <div class="star-line"><img src="images/Star-Line.svg" alt="Star-Line" loading="lazy"></div>
 
-      <div style="text-align: center; width: 100%;"><img style="width: 100%;"
-          src="images/Screenshot 2021-11-03 221034.png" alt=""  loading="lazy"></div>
+      <form>
+        <!-- Success Alert -->
+        <div onclick="hide('successAlert')" style="display: none;" id="successAlert" class="alert alert-success"
+          role="alert">
+          Sent successfully
+          <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- Error Alert -->
+        <div onclick="hide('dangerAlert')" style="display: none;" id="dangerAlert" class="alert alert-danger"
+          role="alert">
+          Can't Send Your Response
+          <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- Form Content -->
+        <div class="form-group">
+          <label for="name">
+            Name<span class="required-star"> *</span>
+          </label>
+          <input class="form-control" type="text" id="name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="email">
+            Email<span class="required-star"> *</span>
+          </label>
+          <input class="form-control" type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="message">
+            Message<span class="required-star"> *</span>
+          </label>
+          <textarea class="form-control" id="message" name="message" dir="auto" rows="6"></textarea>
+        </div>
+        <div><button class="btn btn-primary btn-block" type="submit">Send</button></div>
+      </form>
     </section>
   </main>
 

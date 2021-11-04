@@ -1,7 +1,6 @@
 const versionNumber = "0.9.4";
 document.getElementById("version").innerText = versionNumber;
 
-
 function getVersionCounter(version) {
   return fetch("https://api.github.com/repos/AbdelrahmanBayoumi/Azkar-App/releases/tags/" + version)
     .then(result => result.json())
