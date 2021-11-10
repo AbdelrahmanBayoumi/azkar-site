@@ -225,7 +225,7 @@ body {
   user-select: none;
   cursor: pointer;
 }
-.navbar-logo h1{
+.navbar-logo h1 {
   font-size: 2rem;
 }
 .navbar-toggle {
@@ -378,6 +378,7 @@ section {
   display: flex;
   gap: 20px;
   padding: 20px 0px;
+  padding-right: 20px;
   width: 100%;
 }
 .feature-box {
@@ -386,6 +387,9 @@ section {
   box-shadow: 2px 3px 10px #00000029;
   border-radius: 20px;
   min-width: 500px;
+}
+.feature-box > img {
+  border-radius: 10px;
 }
 /* ::-webkit-scrollbar {
   width: 0;
