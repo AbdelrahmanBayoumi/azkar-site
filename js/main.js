@@ -209,6 +209,10 @@ function initNumberOfDownloads(version) {
     modal.style.display = "none";
     isModelOpen = false;
   }
+  modal.onclick = (e) =>{
+    if(e.target !== e.currentTarget) return;
+    closeModel();
+  }
   document.getElementById("closeModelButton").onclick = closeModel
   document.addEventListener('keydown', function (e) {
     if (isModelOpen && e.key == 'Escape') {
