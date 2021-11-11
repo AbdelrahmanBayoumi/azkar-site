@@ -1,89 +1,275 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="ar">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.4.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.4.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.4.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.4.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.4.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.4.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.4.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.4.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.4.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.4.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="برنامج سطح مكتب يساعدك على: معرفة مواقيت الصلاة، ظهور إشعارات بذكر او دعاء كل فترة محددة، قراءة أذكار الصباح و المساء مع التذكير بها">
+  <meta name="author" content="Abdelrahman Bayoumi">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Azkar - أذكار" />
+  <meta property="og:locale" content="ar_AR" />
+  <meta property="og:locale:alternate" content="ar_AR" />
+  <meta property="og:url" content="https://www.abdelrahmanbayoumi.ml/azkar-site" />
+  <meta property="og:title" content="Azkar - أذكار" />
+  <meta property="og:description"
+    content="برنامج سطح مكتب يساعدك على: معرفة مواقيت الصلاة، ظهور إشعارات بذكر او دعاء كل فترة محددة، قراءة أذكار الصباح و المساء مع التذكير بها" />
+  <meta property="og:image" content="https://www.abdelrahmanbayoumi.ml/azkar-site/images/logo.png" />
+  <meta property="og:image:alt" content="Logo" />
+  <link rel="apple-touch-icon" href="https://www.abdelrahmanbayoumi.ml/azkar-site/images/logo.png">
+  <meta property="og:image:width" content="256" />
+  <meta property="og:image:height" content="256" />
+  <title>Azkar - أذكار</title>
+  <!-- main CSS -->
+  <link href="css/main.css" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" type="image/svg" href="images/Logo - Circle.svg" />
+</head>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+<body id="top">
+  <nav class="navbar" dir="rtl">
+    <ul>
+      <li class="navbar-logo" onclick="scrollToID('top')">
+        <h1>أذكار</h1>
+      </li>
+      <li class="navbar-toggle">
+        <svg viewBox="0 0 100 80" style="fill: white;" width="40" height="30">
+          <rect width="100" height="15"></rect>
+          <rect y="30" width="100" height="15"></rect>
+          <rect y="60" width="100" height="15"></rect>
+        </svg>
+      </li>
+      <li class="navbar-links" onclick="scrollToID('features')">المميزات</li>
+      <li class="navbar-links" onclick="scrollToID('contact')">تواصل معنا</li>
+      <li class="navbar-links navbar-img">
+        <a class="hbox justify-content-center" href="https://github.com/AbdelrahmanBayoumi/Azkar-App" target="_blank">
+          <!-- <img src="images/github.svg" alt="GitHub" loading="lazy"> -->
+          <i class="icon-github"></i>
+        </a>
+      </li>
+      <li class="navbar-links download-button" onclick="scrollToID('download')" dir="auto">
+        تحميل
+        <i style="padding-right: 10px;font-size: 25px;" class="icon-download"></i>
+      </li>
+      <!-- <li class="navbar-links navbar-img lang">
+        <img src="images/world.svg" alt="globe" loading="lazy">
+      </li> -->
+    </ul>
+  </nav>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  <main>
+    <header>
+      <div class="header-img">
+        <img src="images/programAndNotification01.webp" alt="program & notification" loading="lazy">
+      </div>
+      <!-- <div class="download-btn-container">
+        <button dir="auto" onclick="scrollToID('download')">
+          تحميل
+          <i style="padding-inline-start: 20px;font-size: 25px;" class="fas fa-download fa-lg"></i>
+        </button>
+      </div> -->
+      <div class="header-text" dir="auto">
+        <p>برنامج سطح مكتب يساعدك على</p>
+        <p class="header-feature">
+          <!-- <img src="images/check-circle.svg" alt="check"> -->
+          <i class="icon-check-circle"></i>
+          ظهور إشعارات بذكر او دعاء كل فترة محددة
+        </p>
+        <p class="header-feature">
+          <!-- <img src="images/check-circle.svg" alt="check"> -->
+          <i class="icon-check-circle"></i>
+          معرفة مواقيت الصلاة حسب المنطقة الجغرافية
+        </p>
+        <p class="header-feature">
+          <!-- <img src="images/check-circle.svg" alt="check"> -->
+          <i class="icon-check-circle"></i>
+          قراءة أذكار الصباح والمساء مع التذكير بها
+        </p>
+      </div>
+      <a class="scroll-down-icon" style="cursor: pointer;" onclick="scrollToID('features')">
+        <!-- <img src="images/Scroll-Icon.svg" alt="Scroll-Icon" loading="lazy"> -->
+        <i class="icon-arrow-down-circle"></i>
+      </a>
+    </header>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <section id="features" class="first-section">
+      <!-- Section Title -->
+      <h2 class="section-title">المميزات</h2>
+      <div class="star-line"><img src="images/Star-Line.svg" alt="Star-Line" loading="lazy"></div>
+      <!-- Section Content -->
+      <div class="scroll feature-boxs" style="overflow-y: auto; cursor: pointer;">
+        <div class="feature-box">
+          <h3 class="feature-title" dir="auto">ظهور إشعارات بذكر او دعاء كل فترة محددة</h3>
+          <img style="width: 100%;" src="images/notification-screen.webp" alt="notification-screenshot" loading="lazy">
+          <div class="feature-list">
+            <p class="feature-item" dir="auto">
+              <!-- <img class="feature-item-img" src="images/time.svg" alt="time"> -->
+              <i class="icon-clock"></i>
+              إمكانية تعديل الفترة التي يظهر فيها الإشعار
+            </p>
+            <p class="feature-item" dir="auto">
+              <i class="icon-check-circle"></i>
+              <!-- <img class="feature-item-img" src="images/check-circle2.svg" alt="check" loading="lazy"> -->
+              سهولة تغيير مكان ظهور الإشعار
+            </p>
+            <p class="feature-item" dir="auto">
+              <i class="icon-volume"></i>
+              <!-- <img class="feature-item-img" src="images/sound.svg" alt="sound" loading="lazy"> -->
+              إيقاف أو تغيير صوت التنبيه
+            </p>
+            <p class="feature-item" dir="auto">
+              <!-- <img class="feature-item-img" src="images/gear.svg" alt="gear" loading="lazy"> -->
+              <i class="icon-gear"></i>
+              إمكانية إضافة أو حذف أو تعديل الأذكار
+            </p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <h3 class="feature-title" dir="auto">
+            مواقيت الصلاة
+          </h3>
+          <img style="width: 100%;" src="images/Program.webp" alt="notification-screenshot" loading="lazy">
+          <div class="feature-list">
+            <p class="feature-item" dir="auto">
+              <!-- <img class="feature-item-img" src="images/location.svg" alt="time" loading="lazy"> -->
+              <i class="icon-location"></i>
+              ضبط المواقيت حسب الموقع الجغرافي
+            </p>
+            <p class="feature-item" dir="auto">
+              <!-- <img class="feature-item-img" src="images/time.svg" alt="check" loading="lazy"> -->
+              <i class="icon-clock"></i>
+              إظهار الوقت المتبقي للصلاة القادمة
+            </p>
+            <p class="feature-item" dir="auto">
+              <!-- <img class="feature-item-img" src="images/sound.svg" alt="sound" loading="lazy"> -->
+              <i class="icon-volume"></i>
+              إيقاف أو تغيير صوت المؤذن
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <h3 class="feature-title" dir="auto">
+            أذكار الصباح والمساء
+          </h3>
+          <img style="width: 100%;" src="images/timedAzkar.webp" alt="notification-screenshot" loading="lazy">
+          <div class="feature-list">
+            <p class="feature-item" dir="auto">
+              <!-- <img class="feature-item-img" src="images/time.svg" alt="time" loading="lazy"> -->
+              <i class="icon-clock"></i>
+              تفعيل أو إيقاف إشعارات التذكير بهما
+            </p>
+            <p class="feature-item" dir="auto">
+              <!-- <img class="feature-item-img" src="images/sound.svg" alt="check" loading="lazy"> -->
+              <i class="icon-volume"></i>
+              إيقاف أو تغيير صوت التنبيه
+            </p>
+            <p class="feature-item" dir="auto">
+              <!-- <img class="feature-item-img" src="images/gear.svg" alt="sound" loading="lazy"> -->
+              <i class="icon-gear"></i>
+              تكبير وتصغير حجم الخط
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="download">
+      <!-- Section Title -->
+      <h2 class="section-title">تحميل</h2>
+      <div class="star-line"><img src="images/Star-Line.svg" alt="Star-Line" loading="lazy"></div>
+      <p style="text-align: center;" dir="auto">الإصدار رقم: <span id="version">0.0.0</span></p>
+      <div class="download-section">
+        <div class="platform-box">
+          <i style="font-size: 85px;color: #0063C6;" class="icon-windows"></i>
+          <p class="platform-name">32-bit Windows</p>
+          <a href="https://www.google.com.eg/" target="_blank">
+            <button>
+              <i style="padding-right: 10px;font-size: 25px;" class="icon-download"></i>
+              Download (64-bit)
+            </button>
+          </a>
+          <p class="number-of-downloads">عدد التحميلات: <span id="win_exe64_counter">0</span></p>
+        </div>
+
+        <div class="platform-box">
+          <i style="font-size: 85px;color: #0063C6;" class="icon-windows"></i>
+          <p class="platform-name">64-bit Windows</p>
+          <a href="https://www.google.com.eg/" target="_blank">
+            <button>
+              <i style="padding-right: 10px;font-size: 25px;" class="icon-download"></i>
+              Download (32-bit)
+            </button>
+          </a>
+          <p class="number-of-downloads">عدد التحميلات: <span id="win_exe32_counter">0</span></p>
+        </div>
+
+        <div class="platform-box">
+          <img src="images/jar.webp" alt="jar" width="85" height="85" loading="lazy">
+          <!-- <i style="font-size: 85px;color: #0063C6;" class="fab fa-java fa-lg"></i> -->
+          <p class="platform-name">Portable Jar (No JRE) <br><span>JRE 8 required</span></p>
+          <a href="https://www.google.com.eg/" target="_blank">
+            <button>
+              <i style="padding-right: 10px;font-size: 25px ;" class="icon-download"></i>
+              Download (.zip)
+            </button>
+          </a>
+          <p class="number-of-downloads">عدد التحميلات: <span id="jar_counter">0</span></p>
+        </div>
+      </div>
+
+    </section>
+    <section id="contact">
+      <!-- Section Title -->
+      <h2 class="section-title">تواصل معنا</h2>
+      <div class="star-line"><img src="images/Star-Line.svg" alt="Star-Line" loading="lazy"></div>
+
+      <form>
+        <!-- Success Alert -->
+        <div onclick="hide('successAlert')" style="display: none;" id="successAlert" class="alert alert-success"
+          role="alert">
+          Sent successfully
+          <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- Error Alert -->
+        <div onclick="hide('dangerAlert')" style="display: none;" id="dangerAlert" class="alert alert-danger"
+          role="alert">
+          Can't Send Your Response
+          <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- Form Content -->
+        <div class="form-group">
+          <label for="name">
+            Name<span class="required-star"> *</span>
+          </label>
+          <input class="form-control" type="text" id="name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="email">
+            Email<span class="required-star"> *</span>
+          </label>
+          <input class="form-control" type="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="message">
+            Message<span class="required-star"> *</span>
+          </label>
+          <textarea class="form-control" id="message" name="message" dir="auto" rows="6"></textarea>
+        </div>
+        <div><button class="btn btn-primary btn-block" type="submit">Send</button></div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2021 Azkar</span>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
