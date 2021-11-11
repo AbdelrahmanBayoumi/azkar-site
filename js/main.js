@@ -10,7 +10,7 @@ toggleButton.addEventListener('click', () => {
 });
 
 /*
-  ------------------------- General Functions ------------------------
+------------------------- General Functions ------------------------
 */
 /**
  * scroll to specific id in DOM
@@ -34,7 +34,7 @@ function hide(id) {
  */
 function is64Bit() {
   return (navigator.userAgent.indexOf("WOW64") != -1 ||
-    navigator.userAgent.indexOf("Win64") != -1)
+  navigator.userAgent.indexOf("Win64") != -1)
 }
 
 /**
@@ -47,7 +47,7 @@ function isMail(mailString) {
   return reg1.test(mailString);
 }
 /*
-  --------------------- Features Scroll -----------------------------
+--------------------- Features Scroll -----------------------------
 */
 const slider = document.querySelector(".scroll");
 let isDown = false;
@@ -77,7 +77,7 @@ slider.addEventListener("mousemove", e => {
 });
 
 /*
-  ------------------------- Download Section -----------------------
+------------------------- Download Section -----------------------
 */
 const versionNumber = "0.9.4";
 document.getElementById("version").innerText = versionNumber;
@@ -87,105 +87,131 @@ document.getElementById("version").innerText = versionNumber;
  */
 function initNumberOfDownloads(version) {
   fetch("https://api.github.com/repos/AbdelrahmanBayoumi/Azkar-App/releases/tags/" + version)
-    .then(result => result.json())
-    .then(json => {
-      // console.log("data:", data);
-      json.assets.forEach(asset => {
-        if (asset.name.indexOf("32") !== -1) {
-          document.getElementById("win_exe32_counter").innerText = asset.download_count;
-        } else if (asset.name.indexOf("64") !== -1) {
-          document.getElementById("win_exe64_counter").innerText = asset.download_count;
-        } else if (asset.name.indexOf("Jar") !== -1) {
-          document.getElementById("jar_counter").innerText = asset.download_count;
+  .then(result => result.json())
+  .then(json => {
+    // console.log("data:", data);
+    json.assets.forEach(asset => {
+      if (asset.name.indexOf("32") !== -1) {
+        document.getElementById("win_exe32_counter").innerText = asset.download_count;
+      } else if (asset.name.indexOf("64") !== -1) {
+        document.getElementById("win_exe64_counter").innerText = asset.download_count;
+      } else if (asset.name.indexOf("Jar") !== -1) {
+        document.getElementById("jar_counter").innerText = asset.download_count;
+      }
+      console.log("Name:", asset.name, ", Number of Downlads:", asset.download_count);
+    });
+    if (json.assets) {
+      Array.from(document.getElementsByClassName("number-of-downloads")).forEach(
+        (element, index, array) => {
+          element.style.display = "inline";
         }
-        console.log("Name:", asset.name, ", Number of Downlads:", asset.download_count);
-      });
-      if (json.assets) {
-        Array.from(document.getElementsByClassName("number-of-downloads")).forEach(
-          (element, index, array) => {
-            element.style.display = "inline";
-          }
         );
       }
     }).catch(error => console.log('error', error));
-}
-
-/*
+  }
+  
+  /*
   ------------------------- Contact Us -----------------------
-*/
-let successAlert, dangerAlert;
-/**
- * shows the Success Alert in Form with display:block;
- * @param {string} msg 
- */
-function showFormSuccess(msg) {
-  dangerAlert.style.display = "none";
-  successAlert.style.display = "block";
-  successAlert.innerText = msg;
-}
-
-/**
- * shows the Error Alert in Form with display:block;
- * @param {string} msg 
- */
-function showFormError(msg) {
-  successAlert.style.display = "none";
-  dangerAlert.style.display = "block";
-  dangerAlert.innerText = msg;
-}
-
-/**
- * submit contact-us form
- * @param {string} name 
- * @param {string} email 
- * @param {string} message 
- */
-function submit(name, email, message) {
-  if (name == "" || email == "" || message == "") {
-    showFormError("Please enter all Fields");
-    return;
+  */
+ let successAlert, dangerAlert;
+ /**
+  * shows the Success Alert in Form with display:block;
+  * @param {string} msg 
+  */
+ function showFormSuccess(msg) {
+   dangerAlert.style.display = "none";
+   successAlert.style.display = "block";
+   successAlert.innerText = msg;
   }
-
-  if (!isMail(email)) {
-    showFormError("Email is not correct");
-    return;
+  
+  /**
+   * shows the Error Alert in Form with display:block;
+   * @param {string} msg 
+   */
+  function showFormError(msg) {
+    successAlert.style.display = "none";
+    dangerAlert.style.display = "block";
+    dangerAlert.innerText = msg;
   }
-
-  const queryString = '/formResponse?&entry.1748222099=' + encodeURIComponent(name)
+  
+  /**
+   * submit contact-us form
+   * @param {string} name 
+   * @param {string} email 
+   * @param {string} message 
+   */
+  function submit(name, email, message) {
+    if (name == "" || email == "" || message == "") {
+      showFormError("Please enter all Fields");
+      return;
+    }
+    
+    if (!isMail(email)) {
+      showFormError("Email is not correct");
+      return;
+    }
+    
+    const queryString = '/formResponse?&entry.1748222099=' + encodeURIComponent(name)
     + '&entry.336933390=' + encodeURIComponent(email)
     + '&entry.1510931726=' + encodeURIComponent(message);
-
-  fetch('https://docs.google.com/forms/d/e/1FAIpQLSeeXmLteMQ1EHwM77C3Eg_9ksFZb__yc3qzG6tCESAkLIcwEw' + queryString, {
-    method: "POST",
-    mode: "no-cors",
-    redirect: "follow",
-    referrer: "no-referrer"
-  }).then(() => {
-    showFormSuccess("Sent Successfully")
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
-  }).catch(() => {
-    showFormError("Can't Send Your Response");
-  });
-}
-
-/**
+    
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLSeeXmLteMQ1EHwM77C3Eg_9ksFZb__yc3qzG6tCESAkLIcwEw' + queryString, {
+      method: "POST",
+      mode: "no-cors",
+      redirect: "follow",
+      referrer: "no-referrer"
+    }).then(() => {
+      showFormSuccess("Sent Successfully")
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    }).catch(() => {
+      showFormError("Can't Send Your Response");
+    });
+  }
+  
+  /**
  * When Document loading is finished
- */
-window.onload = () => {
-  console.log(`is 64-bit OS => ${is64Bit()}`);
-  // fetch number of downloads for each platform
-  initNumberOfDownloads(versionNumber)
-
-  // add action when form is submitted 
-  successAlert = document.getElementById("successAlert");
-  dangerAlert = document.getElementById("dangerAlert");
-  document.querySelector('form').addEventListener('submit', event => {
-    event.preventDefault();
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-    submit(name, email, message);
-  });
-}
+   */
+  window.onload = () => {
+    console.log(`is 64-bit OS => ${is64Bit()}`);
+    // fetch number of downloads for each platform
+    initNumberOfDownloads(versionNumber)
+    
+    // add action when form is submitted 
+    successAlert = document.getElementById("successAlert");
+    dangerAlert = document.getElementById("dangerAlert");
+    document.querySelector('form').addEventListener('submit', event => {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      submit(name, email, message);
+    });
+  }
+  
+  /*
+    ------------------------- Photo Modal ---------------------------------
+  */
+  let isModelOpen = false;
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+  const captionText = document.getElementById("caption");
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  function openImagePopUp(img) {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt;
+    isModelOpen = true;
+  }
+  function closeModel() {
+    modal.style.display = "none";
+    isModelOpen = false;
+  }
+  document.getElementById("closeModelButton").onclick = closeModel
+  document.addEventListener('keydown', function (e) {
+    if (isModelOpen && e.key == 'Escape') {
+      closeModel()
+  }
+});
