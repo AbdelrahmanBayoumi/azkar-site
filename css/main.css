@@ -575,6 +575,7 @@ section {
 }
 .platform-box button:hover {
   background-color: green;
+  cursor: pointer;
 }
 .number-of-downloads {
   font-size: 0.8em;
