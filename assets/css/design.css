@@ -1,0 +1,165 @@
+/* === Header === */
+
+header {
+    background-color: var(--light-blue);
+    background-image: url("../images/pattern_arabic.png");
+    padding: 50px 10px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.26);
+}
+
+header>h2 {
+    font-size: 2.2em;
+}
+
+
+/* === main === */
+
+main {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+
+/* === tags === */
+
+.tags-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tag {
+    padding: 7px 20px;
+    background-color: var(--dark-primary);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.034);
+    transition: all ease 0.2s;
+    user-select: none;
+}
+
+.tag:hover {
+    background-color: var(--light-blue);
+    color: #fff;
+    cursor: pointer;
+    transform: scale(1.02, 1.02);
+}
+
+.active-tag {
+    background-color: var(--light-blue);
+    color: #fff;
+}
+
+
+/* === articles === */
+
+.articles {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    max-width: 350px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.034);
+    transition: all ease 0.2s;
+}
+
+article:hover {
+    /* background-color: var(--dark-primary); */
+    /* color: #fff; */
+    transform: scale(1.02, 1.02);
+    cursor: pointer;
+}
+
+article>h3 {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.opacity-hover:hover {
+    opacity: 0.5;
+}
+
+.img-thumbnail {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.article-block {
+    padding: 10px 0px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgb(173, 173, 173);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.article-block>h3 {
+    font-size: 1.5em;
+}
+
+.article-block-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.article-img-box {
+    text-align: center;
+    cursor: pointer;
+}
+
+.article-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+
+/* === qoute === */
+
+.qoute-box {
+    position: relative;
+}
+
+.qoute-box>.qoute-source {
+    position: absolute;
+    bottom: 4px;
+    left: 15px;
+    user-select: none;
+    font-size: 0.9em;
+    color: darkgreen;
+}
+
+.qoute {
+    background: rgba(241, 241, 239, 1);
+    padding: 10px 15px;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.093);
+    text-align: justify;
+}
+
+.highlight-qoute {
+    font-weight: bold;
+    font-size: large;
+}
