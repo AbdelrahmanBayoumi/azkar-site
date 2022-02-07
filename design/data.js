@@ -38,6 +38,76 @@ const posts = [{
         image: "/design/images/011.jpg",
         imageHighQualityURL: "https://drive.google.com/drive/folders/1DypHLz3pp8OpEMs9y5to2pSRwlJngu47?usp=sharing",
         tags: ["آيات قرآنية"]
+    }, {
+        title: "",
+        thumbnail: "/design/images/012.jpg",
+        thumbnailALT: "هُنَالِكَ دَعَا زَكَرِيَّا رَبَّهُ ۖ قَالَ رَبِّ هَبْ لِي مِن لَّدُنكَ ذُرِّيَّةً طَيِّبَةً ۖ إِنَّكَ سَمِيعُ الدُّعَاءِ (آل عمران - 38)",
+        image: "/design/images/012.jpg",
+        imageHighQualityURL: "https://drive.google.com/drive/folders/1VPSFUaWdv1YQOCB82RyNt5zjf5XdZmci?usp=sharing",
+        tags: ["آيات قرآنية"]
+    }, {
+        title: "",
+        thumbnail: "/design/images/013.jpg",
+        thumbnailALT: "إِنَّا إِلَيْهِ رَاجِعُونَ",
+        image: "/design/images/013.jpg",
+        imageHighQualityURL: "https://drive.google.com/drive/folders/1op6Pf2CBM7JdvXptS49DWZDtSPkSI_J9?usp=sharing",
+        tags: ["آيات قرآنية"]
+    }, {
+        title: "",
+        thumbnail: "/design/images/014.jpg",
+        thumbnailALT: "لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",
+        image: "/design/images/014.jpg",
+        imageHighQualityURL: "https://drive.google.com/drive/folders/1kO03Hwa2W_TSfYIGnQKruruiWcW2Uci7?usp=sharing",
+        tags: ["آيات قرآنية"]
+    }, {
+        title: "",
+        thumbnail: "/design/images/015.jpg",
+        thumbnailALT: "وَلِلَّهِ مُلْكُ السَّمَاوَاتِ وَالْأَرْضِ ۗ وَاللَّهُ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ (آل عمران - 189)",
+        image: "/design/images/015.jpg",
+        imageHighQualityURL: "https://drive.google.com/drive/folders/12sXs8GnYkJy3tiOL-JxFS6-swn6nw3K5?usp=sharing",
+        tags: ["آيات قرآنية"]
+    }, {
+        title: "",
+        thumbnail: "/design/images/016.jpg",
+        thumbnailALT: "وَلَمَّا أَن جَاءَتْ رُسُلُنَا لُوطًا سِيءَ بِهِمْ وَضَاقَ بِهِمْ ذَرْعًا وَقَالُوا لَا تَخَفْ وَلَا تَحْزَنْ ۖ إِنَّا مُنَجُّوكَ وَأَهْلَكَ إِلَّا امْرَأَتَكَ كَانَتْ مِنَ الْغَابِرِينَ (العنكبوت - 33)",
+        image: "/design/images/016.jpg",
+        imageHighQualityURL: "https://drive.google.com/drive/folders/1YrImbpNLFR2_mUJKRe8OMj8pU_u_h0iJ?usp=sharing",
+        tags: ["آيات قرآنية"]
+    }, {
+        title: "",
+        thumbnail: "/design/images/017.jpg",
+        thumbnailALT: "“ من صدق في طلب الحق وجده “ فريد الأنصاري -رحمه الله",
+        image: "/design/images/017.jpg",
+        imageHighQualityURL: "https://drive.google.com/drive/folders/1_6W-Nj7amG426T-6Co3TlsjU3cGbjNjP?usp=sharing",
+        tags: ["مقولات عربية"]
+    }, {
+        title: "",
+        thumbnail: "/design/images/018.jpg",
+        thumbnailALT: "قال أمير المؤمنين عمر بن الخطّاب رضي الله عنه : من كثُرَ كلامُهُ كثُرَ لغطُهُ، ومن كثُرَ لغطُهُ كثُرَ غلطُهُ، ومن كثُرَ غلطُهُ قلّ ورعُهُ، ومن قلّ ورعُهُ قلّ دينُه.",
+        image: "/design/images/018.jpg",
+        imageHighQualityURL: "https://drive.google.com/drive/folders/1t5YfyAyiiEwDC9Br37PJnZI0gDkDT1tX?usp=sharing",
+        tags: ["مقولات عربية"]
+    }, {
+        title: "",
+        thumbnail: "/design/images/019.jpg",
+        thumbnailALT: "وَمَنْ يَعْمَلْ سُوءًا أَوْ يَظْلِمْ نَفْسَهُ ثُمَّ يَسْتَغْفِرِ اللَّهَ يَجِدِ اللَّهَ غَفُورًا رَحِيمًا",
+        image: "/design/images/019.jpg",
+        imageHighQualityURL: "https://drive.google.com/drive/folders/1YT9gU3PQBtrYVeGb0csFuLkRnpCFEteN?usp=sharing",
+        tags: ["آيات قرآنية"]
+    }, {
+        title: "",
+        thumbnail: "/design/images/020.jpg",
+        thumbnailALT: "إِنَّمَا يُوَفَّى الصَّابِرُونَ أَجْرَهُمْ بِغَيْرِ حِسَابٍ ",
+        image: "/design/images/020.jpg",
+        imageHighQualityURL: "https://drive.google.com/drive/folders/1XuYFi50XuXMY8pSFatA2oB8l3bPR5mdi?usp=sharing",
+        tags: ["آيات قرآنية"]
+    }, {
+        title: "",
+        thumbnail: "/design/images/021.jpg",
+        thumbnailALT: "الْمَقْصِدُ الشَّرْعِيُّ مِنْ وَضْعِ الشَّرِيعَةِ إِخْرَاجَ الْمُكَلَّفِ عَنْ دَاعِيَةِ هَوَاهُ، حَتَّى يَكُونَ عَبْدًا لِلَّهِ اخْتِيَارًا، كَمَا هُوَ عَبْدٌ لِلَّهِ اضْطِرَارًا",
+        image: "/design/images/021.jpg",
+        imageHighQualityURL: "https://drive.google.com/drive/folders/1r51264Fh70CxYfiC4a4DIKzxOfz3O4eh?usp=sharing",
+        tags: ["مقولات عربية"]
     }
     // , {
     //     title: "",
