@@ -119,8 +119,15 @@ const posts = [{
     title: "",
     thumbnail: "/design/images/023.jpg",
     thumbnailALT: "ومَن يَسْتَعْفِفْ يُعِفَّهُ اللَّهُ، ومَن يَسْتَغْنِ يُغْنِهِ اللَّهُ، ومَن يَتَصَبَّرْ يُصَبِّرْهُ اللَّهُ، وما أُعْطِيَ أحَدٌ عَطَاءً خَيْرًا وأَوْسَعَ مِنَ الصَّبْرِ",
-    image: "/design/images/022.jpg",
+    image: "/design/images/023.jpg",
     imageHighQualityURL: "https://drive.google.com/drive/folders/12KZ1RzvuAiLk9wpUfk7ArehZnc8YZ-zR?usp=sharing",
+    tags: ["أحاديث نبوية"]
+}, {
+    title: "",
+    thumbnail: "/design/images/024.jpg",
+    thumbnailALT: "يَا حَيُّ يَا قَــيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ، أَصْلِحْ لِي شَأْنِي كُلَّهُ، وَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ",
+    image: "/design/images/024.jpg",
+    imageHighQualityURL: "https://drive.google.com/drive/folders/1bXussR1vxE4Q8CbsZf2_TEoRq7RC7GfN?usp=sharing",
     tags: ["أحاديث نبوية"]
 }
     // , {
