@@ -3,24 +3,28 @@ let selectedTag = document.getElementById("allTags");
 function handlePosts(tagChoosen) {
     const articlesContainer = document.getElementById("articles");
     let postsHtml = "";
-    posts.forEach((post) => {
+    let i = 0;
+    ARTICLES.forEach(element => {
+        if (tagChoosen === "" || element.tags.includes(tagChoosen)) {
+            postsHtml += `
+        <a href='${element.url}'><article>
+            ${getTitle(element.title)}
+            <img src="${element.thumbnail}" alt="${element.thumbnailALT}" class="img-thumbnail" loading=lazy>
+        </article></a>
+        `;
+        }
+    });
+    POSTS.sort(() => Math.random() - 0.5);
+    POSTS.forEach((post) => {
         if (tagChoosen === "" || post.tags.includes(tagChoosen)) {
-            if (post.image) {
-                postsHtml += `
+            postsHtml += `
                 <article>
                     ${getTitle(post.title)}
-                    <img onclick="openImagePopUp(this, '${post.imageHighQualityURL}')" src="${post.thumbnail}" class="img-thumbnail opacity-hover" loading="lazy" alt="${post.thumbnailALT}">
+                    <img onclick="openImagePopUp(${i})" src="${post.dirPath + post.thumbnail}" class="img-thumbnail opacity-hover" loading="lazy" alt="${post.thumbnailALT}">
                 </article>
             `;
-            } else {
-                postsHtml += `
-                <a href='${post.url}'><article>
-                    ${getTitle(post.title)}
-                    <img src="${post.thumbnail}" alt="${post.thumbnailALT}" class="img-thumbnail" loading=lazy>
-                </article></a>
-            `;
-            }
         }
+        i++;
     });
     articlesContainer.innerHTML = postsHtml;
 }
@@ -53,18 +57,57 @@ const modalImg = document.getElementById("modalImg");
 const captionText = document.getElementById("caption");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-function openImagePopUp(img, imageHighQualityURL) {
-    modal.style.display = "block";
-    modalImg.src = img.src;
-    if (imageHighQualityURL || imageHighQualityURL != "") {
-        captionText.innerHTML = `
-        <p dir=rtl>لتحميل الصورة بجودة عالية: <a href="${imageHighQualityURL}" target="_blank">⬇️ أضغط هنا ⬇️</a></p>
-    `;
-    } else {
-        captionText.innerHTML = "";
+let slideIndex = 1;
+function openImagePopUp(imageIndex) {
+    // render slide-show
+    const slidesContainer = document.getElementById('slidesContainer');
+    const demoContainer = document.getElementById('demoContainer');
+    demoContainer.innerHTML = "";
+    slidesContainer.innerHTML = "";
+    const element = POSTS[imageIndex];
+    for (let i = 0; i < element.images.length; i++) {
+        slidesContainer.innerHTML += `
+            <div class="slides">
+                <div class="numbertext">${i + 1} / ${element.images.length}</div>
+                <img src="${element.dirPath + element.images[i]}" alt="${element.thumbnailALT}">
+                <a class="download" href="${(element.dirPath + element.images[i]).replace("jpg", "png")}" download>⬇️ تحميل</a>
+            </div>
+        `
+        demoContainer.innerHTML += `
+            <div class="slide-column">
+                <img class="slide-demo cursor" src="${element.dirPath + element.images[i]}" style="width:100%" onclick="currentSlide(${i + 1})"
+                alt="${element.thumbnailALT}">
+            </div>
+        `;
     }
+    // select first one
+    slideIndex = 1;
+    showSlides(slideIndex);
 
+    modal.style.display = "block";
     isModelOpen = true;
+}
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+function showSlides(n) {
+    const slides = document.getElementsByClassName("slides");
+    const dots = document.getElementsByClassName("slide-demo");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" slide-active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " slide-active";
 }
 
 function closeModel() {
@@ -76,7 +119,7 @@ modal.onclick = (e) => {
     closeModel();
 };
 document.getElementById("closeModelButton").onclick = closeModel;
-document.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", function (e) {
     if (isModelOpen && e.key == "Escape") {
         closeModel();
     }
