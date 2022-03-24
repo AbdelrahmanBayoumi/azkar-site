@@ -1,4 +1,4 @@
-let selectedTag = document.getElementById("allTags");
+let allTags = document.getElementById("allTags");
 
 function handlePosts(tagChoosen) {
     const articlesContainer = document.getElementById("articles");
@@ -46,7 +46,7 @@ function toggleTag(selectedTag, tagName) {
     selectedTag.classList.add('active-tag')
 }
 
-toggleTag(selectedTag, "");
+toggleTag(allTags, "");
 
 /*
     ------------------------- Photo Modal ---------------------------------

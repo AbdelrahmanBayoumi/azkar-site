@@ -19,7 +19,7 @@ const POSTS = [
         title: "",
         dirPath: "/design/images/002/",
         thumbnail: "6.jpg",
-        thumbnailALT: "إِنَّا إِلَيْهِ رَاجِعُونَ",
+        thumbnailALT: "إنّا لله وإنّا إليهِ رَاجعُون",
         images: [
             "6.jpg",
             "1.jpg",
