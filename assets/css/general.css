@@ -314,7 +314,7 @@ body {
 .navbar-img img {
     width: 30px;
     height: 30px;
-    filter: invert(1);
+    /* filter: invert(1); */
 }
 
 .navbar-img i {
@@ -492,7 +492,7 @@ footer {
     }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 690px) {
     .navbar ul {
         flex-wrap: wrap;
         padding: 5px 20px 5px 20px;
