@@ -360,7 +360,24 @@ const POSTS = [
         ],
         imageHighQualityURL: "",
         tags: ["أحاديث نبوية"]
+    }, {
+        title: "",
+        dirPath: "/design/images/027/",
+        thumbnail: "6.jpg",
+        thumbnailALT: "مَن صلى العشاءَ في جماعةٍ كأنما قام نصفَ ليلةٍ ، ومَن صلى الصبحَ في جماعةٍ فكأنما صلى الليلَ كلَّه",
+        images: [
+            "6.jpg",
+            "1.jpg",
+            "2.jpg",
+            "3.jpg",
+            "4.jpg",
+            "5.jpg",
+            "7.jpg",
+            "8.jpg",
+            "9.jpg",
+            "10.jpg",
+        ],
+        imageHighQualityURL: "https://drive.google.com/drive/folders/10QnuLQklRZar_y2JWJuDCaIoCCe0w9jk?usp=sharing",
+        tags: ["أحاديث نبوية"]
     }
 ];
-/*,, 
-*/
