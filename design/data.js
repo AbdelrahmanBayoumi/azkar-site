@@ -379,5 +379,30 @@ const POSTS = [
         ],
         imageHighQualityURL: "https://drive.google.com/drive/folders/10QnuLQklRZar_y2JWJuDCaIoCCe0w9jk?usp=sharing",
         tags: ["أحاديث نبوية"]
+    }, {
+        title: "",
+        dirPath: "/design/images/028/",
+        thumbnail: "12.jpg",
+        thumbnailALT: "فإذا فرغت فانصب وإلى ربك فارغب",
+        images: [
+            "12.jpg",
+            "1.jpg",
+            "2.jpg",
+            "3.jpg",
+            "4.jpg",
+            "5.jpg",
+            "6.jpg",
+            "7.jpg",
+            "8.jpg",
+            "9.jpg",
+            "10.jpg",
+            "11.jpg",
+            "13.jpg",
+            "14.jpg",
+            "15.jpg",
+            "16.jpg",
+        ],
+        imageHighQualityURL: "https://drive.google.com/drive/folders/1fQrNCflxLmpmGSiGExiOBMaDukw8qn64?usp=sharing",
+        tags: ["آيات قرآنية"]
     }
 ];
