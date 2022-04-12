@@ -32,16 +32,80 @@ slider.addEventListener("mousemove", (e) => {
 ------------------------- Download Section -----------------------
 */
 const versionNumber = "1.1.0";
+const VERSIONS = ["1.1.0"];
 document.getElementById("version").innerText = versionNumber;
+
+/**
+ * Fetch Github Repo Release Data
+ */
+async function getReleasesData(user, repo) {
+    try {
+        const result = await fetch(`https://api.github.com/repos/${user}/${repo}/releases?page=1&per_page=5`, {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+        }).then((res) => res.json());
+        return new Promise(function (resolve, reject) {
+            resolve(result);
+        });
+    } catch (error) {
+        return new Promise(function (resolve, reject) {
+            reject(error);
+        });
+    }
+}
+
+function initReleaseData(result) {
+    // console.log("initReleaseData: ", result);
+    let total64bit = 0;
+    let total32bit = 0;
+    let totaljar = 0;
+
+    result.forEach(item => {
+        if (item.assets.length) {
+            console.log("------", item.name, "------");
+            item.assets.forEach(asset => {
+                console.log("Name:", asset.name, ", Number of Downlads:", asset.download_count);
+                if (asset.name.indexOf("64") !== -1) {
+
+                    total64bit += asset.download_count;
+                }
+                if (asset.name.indexOf("32") !== -1) {
+                    total32bit += asset.download_count;
+                }
+                if (asset.name.indexOf("PortableJar_No-JRE") !== -1) {
+                    totaljar += asset.download_count;
+                }
+            });
+        }
+    });
+    console.log("------ Total ------");
+    console.log("total64bit: " + total64bit);
+    console.log("total32bit: " + total32bit);
+    console.log("totaljar: " + totaljar);
+
+    document.getElementById("win_exe64_counter").innerText = total64bit;
+    document.getElementById("win_exe32_counter").innerText = total32bit;
+    document.getElementById("jar_counter").innerText = totaljar;
+
+    if (totaljar && total32bit && total64bit) {
+        Array.from(
+            document.getElementsByClassName("number-of-downloads")
+        ).forEach((element, index, array) => {
+            element.style.display = "inline";
+        });
+    }
+
+}
+
 /**
  * GET number of downloads for specific VersionNumber
  * @param {string} version
  */
 function initNumberOfDownloads(version) {
     fetch(
-            "https://api.github.com/repos/AbdelrahmanBayoumi/Azkar-App/releases/tags/" +
-            version
-        )
+        "https://api.github.com/repos/AbdelrahmanBayoumi/Azkar-App/releases/tags/" +
+        version
+    )
         .then((result) => result.json())
         .then((json) => {
             // console.log("data:", data);
@@ -124,14 +188,14 @@ function submit(name, email, message) {
         encodeURIComponent(message);
 
     fetch(
-            "https://docs.google.com/forms/d/e/1FAIpQLSeeXmLteMQ1EHwM77C3Eg_9ksFZb__yc3qzG6tCESAkLIcwEw" +
-            queryString, {
-                method: "POST",
-                mode: "no-cors",
-                redirect: "follow",
-                referrer: "no-referrer",
-            }
-        )
+        "https://docs.google.com/forms/d/e/1FAIpQLSeeXmLteMQ1EHwM77C3Eg_9ksFZb__yc3qzG6tCESAkLIcwEw" +
+        queryString, {
+        method: "POST",
+        mode: "no-cors",
+        redirect: "follow",
+        referrer: "no-referrer",
+    }
+    )
         .then(() => {
             showFormSuccess("Sent Successfully");
             document.getElementById("name").value = "";
@@ -149,7 +213,9 @@ function submit(name, email, message) {
 window.onload = () => {
     console.log(`is 64-bit OS => ${is64Bit()}`);
     // fetch number of downloads for each platform
-    initNumberOfDownloads(versionNumber);
+    getReleasesData("AbdelrahmanBayoumi", "Azkar-App")
+        .then((result) => initReleaseData(result))
+        .catch((error) => console.log("error:", error));
 
     // add action when form is submitted
     successAlert = document.getElementById("successAlert");
@@ -187,7 +253,7 @@ modal.onclick = (e) => {
     closeModel();
 };
 document.getElementById("closeModelButton").onclick = closeModel;
-document.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", function (e) {
     if (isModelOpen && e.key == "Escape") {
         closeModel();
     }
