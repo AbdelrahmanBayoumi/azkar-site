@@ -189,22 +189,26 @@
                 <div class="platform-box">
                     <i style="font-size: 85px;color: #0063C6;" class="icon-windows"></i>
                     <p class="platform-name">64-bit Windows</p>
-                    <button
-                        onclick='openDownloadPopUp("https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/Azkar_windows-x64.exe", "64-bit Windows")'>
-                        <i style="padding-right: 10px;font-size: 25px;" class="icon-download"></i>
-                        Download (64-bit)
-                    </button>
+                    <a href="https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/Azkar_windows-x64.exe"
+                        target="_blank">
+                        <button>
+                            <i style="padding-right: 10px;font-size: 25px;" class="icon-download"></i>
+                            Download (64-bit)
+                        </button>
+                    </a>
                     <p class="number-of-downloads">عدد التحميلات: <span id="win_exe64_counter">0</span></p>
                 </div>
 
                 <div class="platform-box">
                     <i style="font-size: 85px;color: #0063C6;" class="icon-windows"></i>
                     <p class="platform-name">32-bit Windows</p>
-                    <button
-                        onclick='openDownloadPopUp("https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/Azkar_windows-x32.exe", "32-bit Windows")'>
-                        <i style="padding-right: 10px;font-size: 25px;" class="icon-download"></i>
-                        Download (32-bit)
-                    </button>
+                    <a href="https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/Azkar_windows-x32.exe"
+                        target="_blank">
+                        <button>
+                            <i style="padding-right: 10px;font-size: 25px;" class="icon-download"></i>
+                            Download (32-bit)
+                        </button>
+                    </a>
                     <p class="number-of-downloads">عدد التحميلات: <span id="win_exe32_counter">0</span></p>
                 </div>
 
@@ -212,11 +216,13 @@
                     <img src="assets/images/jar.webp" alt="jar" width="85" height="85" loading="lazy">
                     <!-- <i style="font-size: 85px;color: #0063C6;" class="fab fa-java fa-lg"></i> -->
                     <p class="platform-name">Portable Jar (No JRE) <br><span>JRE 8 required</span></p>
-                    <button
-                        onclick='openDownloadPopUp("https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/PortableJar_No-JRE.zip", "Portable Jar (No JRE) <br><span>JRE 8 required</span>")'>
-                        <i style="padding-right: 10px;font-size: 25px ;" class="icon-download"></i>
-                        Download (.zip)
-                    </button>
+                    <a href="https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/PortableJar_No-JRE.zip"
+                        target="_blank">
+                        <button>
+                            <i style="padding-right: 10px;font-size: 25px ;" class="icon-download"></i>
+                            Download (.zip)
+                        </button>
+                    </a>
                     <p class="number-of-downloads">عدد التحميلات: <span id="jar_counter">0</span></p>
                 </div>
             </div>
@@ -277,21 +283,6 @@
         <span id="closeModelButton" class="close">&times;</span>
         <img class="modal-content" id="modalImg">
         <div id="caption"></div>
-    </div>
-
-    <!-- The Modal -->
-    <div id="downloadModal" class="modal">
-        <span id="closeDownloadModelButton" class="close">&times;</span>
-        <div id="downloadModalContent">
-            <h2 id="downloadVersionValue" style="text-align: center;">64-bit Windows</h2>
-            <p dir="rtl">سيبدأ التحميل خلال ثوانٍ..</p>
-            <div class="slide-progress-bar">
-                <div class="progress-bar" id="progress-bar"></div>
-                <!--progress-bar-->
-            </div>
-            <!-- <button onclick="progressBar()">Start</button> -->
-            <!--slide-progress-bar-->
-        </div>
     </div>
 
     <script src="assets/js/general.js"></script>

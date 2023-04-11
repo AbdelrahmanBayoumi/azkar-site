@@ -229,29 +229,79 @@ window.onload = () => {
 };
 /*
     ------------------------- Photo Modal ---------------------------------
-  */
+    */
 let isModelOpen = false;
-const modal = document.getElementById("modal");
+
+const photoModal = document.getElementById("modal");
 const modalImg = document.getElementById("modalImg");
 const captionText = document.getElementById("caption");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 function openImagePopUp(img) {
-    modal.style.display = "block";
+    photoModal.style.display = "block";
     modalImg.src = img.src;
     captionText.innerHTML = img.alt;
     isModelOpen = true;
 }
-
-function closeModel() {
-    modal.style.display = "none";
-    isModelOpen = false;
-}
-modal.onclick = (e) => {
+photoModal.onclick = (e) => {
     if (e.target !== e.currentTarget) return;
     closeModel();
 };
 document.getElementById("closeModelButton").onclick = closeModel;
+
+/*
+------------------------- Download Modal ---------------------------------
+*/
+const downloadModal = document.getElementById("downloadModal");
+const elem = document.getElementById("progress-bar");
+let width = 1;
+let interval;
+
+function progressBar(callback) {
+    resetProgressBar();
+
+    interval = setInterval(frame, 100);
+
+    function frame() {
+        if (width >= 100) {
+            clearInterval(interval);
+            callback()
+        } else {
+            width++;
+            elem.style.width = width + '%';
+        }
+    }
+}
+
+function resetProgressBar() {
+    width = 1;
+    clearInterval(interval)
+    elem.style.width = width + '%';
+}
+
+function openDownloadPopUp(url, version) {
+    downloadModal.style.display = "block";
+    document.getElementById("downloadVersionValue").innerHTML = version;
+    progressBar(() => {
+        console.log(version);
+        window.open(url, "_self")
+    });
+    isModelOpen = true;
+}
+
+downloadModal.onclick = (e) => {
+    if (e.target !== e.currentTarget) return;
+    closeModel();
+};
+
+function closeModel() {
+    photoModal.style.display = "none";
+    downloadModal.style.display = "none";
+    resetProgressBar()
+    isModelOpen = false;
+}
+
+document.getElementById("closeDownloadModelButton").onclick = closeModel;
 document.addEventListener("keydown", function (e) {
     if (isModelOpen && e.key == "Escape") {
         closeModel();
