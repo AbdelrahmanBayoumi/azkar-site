@@ -450,7 +450,7 @@ const POSTS = [
       "18.jpg",
     ],
     imageHighQualityURL:
-      "https://drive.google.com/drive/folders/1xv2NqM_bmOV0788uqJ8U5qa1he9SlmcP?usp=sharing",
+      "https://drive.google.com/drive/folders/13Yto9vQew1KuS_vYyqIgx3ck07jQ83yu?usp=sharing",
     tags: ["أحاديث نبوية"],
   },
 ];
