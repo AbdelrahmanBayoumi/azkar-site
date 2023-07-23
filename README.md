@@ -1,12 +1,9 @@
 # Azkar - أذكار
 
-Azkar is a desktop app that helps you to:
+🌎 Landing Page for Azkar App => https://azkar-site.web.app
 
-* **Get prayer times** according to your location.
-* **Receive notifications** with a reminder of a specific prayer or supplication.
-* **Read the morning and evening adhkar** with a reminder.
 
-![image](https://github.com/AbdelrahmanBayoumi/azkar-site/assets/48678280/9ce9310e-f90a-492b-9a3f-8f313c484cbe)
+![image](https://github.com/AbdelrahmanBayoumi/azkar-site/assets/48678280/5f7b7a1b-86bf-496a-8e6b-f3c2566ac51a)
 
 
 ## Download
