@@ -430,7 +430,7 @@ const POSTS = [
     thumbnailALT:
       "مَن تَعارَّ مِنَ اللَّيْلِ، فَقالَ: لا إلَهَ إلَّا اللَّهُ وحْدَهُ لا شَرِيكَ له، له المُلْكُ وله الحَمْدُ، وهو علَى كُلِّ شيءٍ قَديرٌ، الحَمْدُ لِلَّهِ، وسُبْحَانَ اللَّهِ، ولَا إلَهَ إلَّا اللَّهُ، واللَّهُ أَكْبَرُ، ولَا حَوْلَ ولَا قُوَّةَ إلَّا باللَّهِ، ثُمَّ قالَ: اللَّهُمَّ اغْفِرْ لِي، أوْ دَعَا؛ اسْتُجِيبَ له، فإنْ تَوَضَّأَ وصَلَّى قُبِلَتْ صَلَاتُهُ",
     images: [
-        "2.jpg",
+      "2.jpg",
       "1.jpg",
       "3.jpg",
       "4.jpg",
@@ -452,5 +452,38 @@ const POSTS = [
     imageHighQualityURL:
       "https://drive.google.com/drive/folders/13Yto9vQew1KuS_vYyqIgx3ck07jQ83yu?usp=sharing",
     tags: ["أحاديث نبوية"],
+  },
+  {
+    title: "",
+    dirPath: "/design/images/031/",
+    thumbnail: "10.jpg",
+    thumbnailALT:
+      "قَد وَزَّع اللَهُ بَينَ الخَلقِ رزقَهُمُ لَم يَخلُق اللَهُ مِن خَلقٍ يُضَيِّعُهُ وَمَن غَدا لابِساً ثَوبَ النَعِيم بِلا شَكرٍ عَلَيهِ فَإِنَّ اللَهَ يَنزَعُهُ",
+    images: ["10.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg"],
+    imageHighQualityURL:
+      "https://drive.google.com/drive/folders/1noGfpt3_HvpDtqng_vhkhhMBQgsDXLTc?usp=sharing",
+    tags: ["مقولات عربية"],
+  },
+  {
+    title: "",
+    dirPath: "/design/images/032/",
+    thumbnail: "1.jpg",
+    thumbnailALT:
+      "قَد وَزَّع اللَهُ بَينَ الخَلقِ رزقَهُمُ لَم يَخلُق اللَهُ مِن خَلقٍ يُضَيِّعُهُ",
+    images: ["1.jpg", "2.jpg", "3.jpg", "4.jpg"],
+    imageHighQualityURL:
+      "https://drive.google.com/drive/folders/1YX6nIO686ySkialRyusJfZoDotUgF4QC?usp=sharing",
+    tags: ["مقولات عربية"],
+  },
+  {
+    title: "",
+    dirPath: "/design/images/033/",
+    thumbnail: "1.jpg",
+    thumbnailALT:
+      "أخشى إن لم نبادر عاجلًا بالصعود إلى جسر التعب؛ أن نصطدم يومًا بتصرّم العمر دون تحقق شيء من تلك الطموحات، وما أقسى خيبة نهاية النفق.",
+    images: ["1.jpg"],
+    imageHighQualityURL:
+      "https://drive.google.com/drive/folders/1ZQqwVdLeOpDOFBIVN1UWQ-G00xwqSCqv?usp=sharing",
+    tags: ["مقولات عربية"],
   },
 ];
