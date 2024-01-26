@@ -486,4 +486,15 @@ const POSTS = [
       "https://drive.google.com/drive/folders/1ZQqwVdLeOpDOFBIVN1UWQ-G00xwqSCqv?usp=sharing",
     tags: ["مقولات عربية"],
   },
+  {
+    title: "",
+    dirPath: "/design/images/034/",
+    thumbnail: "1.jpg",
+    thumbnailALT:
+      "يُوشِكُ أنْ يَكونَ خَيْرَ مَالِ المُسْلِمِ غَنَمٌ يَتْبَعُ بهَا شَعَفَ الجِبَالِ ومَوَاقِعَ القَطْرِ، يَفِرُّ بدِينِهِ مِنَ الفِتَنِ",
+    images: ["1.jpg"],
+    imageHighQualityURL:
+      "https://drive.google.com/drive/folders/1QbT9G0N2yQpPgLCvJpvndAdvGclioFGT?usp=sharing",
+    tags: ["أحاديث نبوية"],
+  },
 ];
