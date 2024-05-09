@@ -21,8 +21,8 @@ function handlePosts(tagChoosen) {
                 <article>
                     ${getTitle(post.title)}
                     <img onclick="openImagePopUp(${i})" src="${
-				post.dirPath + post.thumbnail
-			}" class="img-thumbnail opacity-hover" loading="lazy" alt="${post.thumbnailALT}">
+						post.dirPath + post.thumbnail
+					}" class="img-thumbnail opacity-hover" loading="lazy" alt="${post.thumbnailALT}">
                 </article>
             `;
 		}
