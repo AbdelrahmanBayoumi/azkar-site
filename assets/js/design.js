@@ -20,7 +20,9 @@ function handlePosts(tagChoosen) {
 			postsHtml += `
                 <article>
                     ${getTitle(post.title)}
-                    <img onclick="openImagePopUp(${i})" src="${post.dirPath + post.thumbnail}" class="img-thumbnail opacity-hover" loading="lazy" alt="${post.thumbnailALT}">
+                    <img onclick="openImagePopUp(${i})" src="${
+				post.dirPath + post.thumbnail
+			}" class="img-thumbnail opacity-hover" loading="lazy" alt="${post.thumbnailALT}">
                 </article>
             `;
 		}
@@ -39,6 +41,7 @@ function getTitle(title) {
 
 function toggleTag(selectedTag, tagName) {
 	handlePosts(tagName);
+	CustomEvents.switchDesignCategory(tagName);
 	for (const iterator of document.getElementsByClassName('tag')) {
 		iterator.classList.remove('active-tag');
 	}
@@ -65,16 +68,19 @@ function openImagePopUp(imageIndex) {
 	slidesContainer.innerHTML = '';
 	const element = POSTS[imageIndex];
 	for (let i = 0; i < element.images.length; i++) {
+		const imageName = (element.dirPath + element.images[i]).replace('jpg', 'png');
 		slidesContainer.innerHTML += `
             <div class="slides">
                 <div class="numbertext">${i + 1} / ${element.images.length}</div>
                 <img src="${element.dirPath + element.images[i]}" alt="${element.thumbnailALT}">
-                <a class="download" href="${(element.dirPath + element.images[i]).replace('jpg', 'png')}" download>⬇️ تحميل</a>
+                <a class="download" onclick="CustomEvents.downloadDesignImage('${imageName}');" href="${imageName}" download>⬇️ تحميل</a>
             </div>
         `;
 		demoContainer.innerHTML += `
             <div class="slide-column">
-                <img class="slide-demo cursor" src="${element.dirPath + element.images[i]}" style="width:100%" onclick="currentSlide(${i + 1})"
+                <img class="slide-demo cursor" src="${
+					element.dirPath + element.images[i]
+				}" style="width:100%" onclick="currentSlide(${i + 1})"
                 alt="${element.thumbnailALT}">
             </div>
         `;

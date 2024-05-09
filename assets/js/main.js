@@ -260,10 +260,12 @@ function resetProgressBar() {
 }
 
 function openDownloadPopUp(url, version) {
+	CustomEvents.clickDownloadRelease(version);
 	downloadModal.style.display = 'block';
 	document.getElementById('downloadVersionValue').innerHTML = version;
 	progressBar(() => {
 		console.log(version);
+		CustomEvents.waitedForRelease(version);
 		window.open(url, '_self');
 	});
 	isModelOpen = true;
