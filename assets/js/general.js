@@ -1,12 +1,12 @@
 /*
   ------------------------- NavBar ---------------------------------
 */
-const toggleButton = document.getElementsByClassName("navbar-toggle")[0];
-const navBarLinks = document.getElementsByClassName("navbar-links");
-toggleButton.addEventListener("click", () => {
-    for (let i = 0; i < navBarLinks.length; i++) {
-        navBarLinks[i].classList.toggle("active");
-    }
+const toggleButton = document.getElementsByClassName('navbar-toggle')[0];
+const navBarLinks = document.getElementsByClassName('navbar-links');
+toggleButton.addEventListener('click', () => {
+	for (let i = 0; i < navBarLinks.length; i++) {
+		navBarLinks[i].classList.toggle('active');
+	}
 });
 
 /*
@@ -17,7 +17,7 @@ toggleButton.addEventListener("click", () => {
  * @param {string} id: element id in DOM
  */
 function scrollToID(id) {
-    document.getElementById(id).scrollIntoView();
+	document.getElementById(id).scrollIntoView();
 }
 
 /**
@@ -25,7 +25,7 @@ function scrollToID(id) {
  * @param {string} id: element id in DOM
  */
 function hide(id) {
-    document.getElementById(id).style.display = "none";
+	document.getElementById(id).style.display = 'none';
 }
 
 /**
@@ -33,10 +33,7 @@ function hide(id) {
  * @returns true if the OS is 64-bit and false otherwise
  */
 function is64Bit() {
-    return (
-        navigator.userAgent.indexOf("WOW64") != -1 ||
-        navigator.userAgent.indexOf("Win64") != -1
-    );
+	return navigator.userAgent.indexOf('WOW64') != -1 || navigator.userAgent.indexOf('Win64') != -1;
 }
 
 /**
@@ -45,6 +42,6 @@ function is64Bit() {
  * @returns true if email format is valid, and false otherwise
  */
 function isMail(mailString) {
-    var reg1 = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-    return reg1.test(mailString);
+	var reg1 = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+	return reg1.test(mailString);
 }
