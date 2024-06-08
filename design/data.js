@@ -201,7 +201,7 @@ const POSTS = [
 		dirPath: '/design/images/015/',
 		thumbnail: '1.jpg',
 		thumbnailALT:
-			'مَن أصبحَ منكم آمنًا في سربِهِ ، مُعافًى في جسدِهِ عندَهُ قوتُ يومِهِ ، فَكَأنَّما حيزت لَهُ الدُّنيا',
+			'مَن أصبحَ منكم آمنًا في سربِهِ، مُعافًى في جسدِهِ عندَهُ قوتُ يومِهِ، فَكَأنَّما حيزت لَهُ الدُّنيا',
 		images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'],
 		imageHighQualityURL: 'https://drive.google.com/drive/folders/126-XHJ36gVLtk6BB0D99liSRaBs6EQL-?usp=sharing',
 		tags: ['أحاديث نبوية'],
@@ -305,7 +305,7 @@ const POSTS = [
 		dirPath: '/design/images/027/',
 		thumbnail: '6.jpg',
 		thumbnailALT:
-			'مَن صلى العشاءَ في جماعةٍ كأنما قام نصفَ ليلةٍ ، ومَن صلى الصبحَ في جماعةٍ فكأنما صلى الليلَ كلَّه',
+			'مَن صلى العشاءَ في جماعةٍ كأنما قام نصفَ ليلةٍ، ومَن صلى الصبحَ في جماعةٍ فكأنما صلى الليلَ كلَّه',
 		images: ['6.jpg', '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg'],
 		imageHighQualityURL: 'https://drive.google.com/drive/folders/10QnuLQklRZar_y2JWJuDCaIoCCe0w9jk?usp=sharing',
 		tags: ['أحاديث نبوية'],
@@ -341,7 +341,7 @@ const POSTS = [
 		dirPath: '/design/images/029/',
 		thumbnail: '1.jpg',
 		thumbnailALT:
-			'مَنْ يَسْتَعْفِفْ يُعِفَّهُ اللَّهُ ، وَمَنْ يَسْتَغْنِ يُغْنِهِ اللَّهُ ، وَمَنْ يَتَصَبَّرْ يُصَبِّرْهُ اللَّهُ ، وَمَا أُعْطِيَ أَحَدٌ عَطَاءً خَيْرًا وَأَوْسَعَ مِنْ الصَّبْرِ',
+			'مَنْ يَسْتَعْفِفْ يُعِفَّهُ اللَّهُ، وَمَنْ يَسْتَغْنِ يُغْنِهِ اللَّهُ، وَمَنْ يَتَصَبَّرْ يُصَبِّرْهُ اللَّهُ، وَمَا أُعْطِيَ أَحَدٌ عَطَاءً خَيْرًا وَأَوْسَعَ مِنْ الصَّبْرِ',
 		images: ['1.jpg', '2.jpg', '3.jpg'],
 		imageHighQualityURL: 'https://drive.google.com/drive/folders/1xv2NqM_bmOV0788uqJ8U5qa1he9SlmcP?usp=sharing',
 		tags: ['أحاديث نبوية'],
@@ -412,6 +412,15 @@ const POSTS = [
 			'يُوشِكُ أنْ يَكونَ خَيْرَ مَالِ المُسْلِمِ غَنَمٌ يَتْبَعُ بهَا شَعَفَ الجِبَالِ ومَوَاقِعَ القَطْرِ، يَفِرُّ بدِينِهِ مِنَ الفِتَنِ',
 		images: ['1.jpg'],
 		imageHighQualityURL: 'https://drive.google.com/drive/folders/1QbT9G0N2yQpPgLCvJpvndAdvGclioFGT?usp=sharing',
+		tags: ['أحاديث نبوية'],
+	},
+	{
+		title: '',
+		dirPath: '/design/images/035/',
+		thumbnail: '1.jpg',
+		thumbnailALT: 'الله أكبر، الله أكبر الله أكبر لا إله إلا الله، والله أكبر الله أكبر ولله الحمد',
+		images: ['1.jpg'],
+		imageHighQualityURL: 'https://drive.google.com/drive/folders/1OTFtDxvN1mDYKU3l-BaZDu0tM865xEjg?usp=sharing',
 		tags: ['أحاديث نبوية'],
 	},
 ];
