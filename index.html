@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar">
 	<head>
 		<meta charset="UTF-8" />
@@ -77,9 +77,25 @@
 				<li class="navbar-links" onclick="CustomEvents.navBarLinks('features');scrollToID('features')">
 					المميزات
 				</li>
-				<!-- <li class="navbar-links" onclick="window.open('/design','_blank');">تصميمات</li> -->
-				<li class="navbar-links" onclick="CustomEvents.navBarLinks('design');window.location.href = '/design'">
+				<li
+					class="navbar-links animated-border-fill-button"
+					onclick="CustomEvents.navBarLinks('design');window.location.href = '/design'"
+				>
 					تصميمات
+					<svg viewBox="0 0 200 40" fill="none" preserveAspectRatio="none">
+						<rect
+							vector-effect="non-scaling-stroke"
+							x="0.5"
+							y="0.5"
+							width="199"
+							height="39"
+							rx="9.5"
+							stroke="#5296cf"
+							stroke-dasharray="460"
+							stroke-dashoffset="460"
+							stroke-width="3"
+						/>
+					</svg>
 				</li>
 				<li class="navbar-links" onclick="CustomEvents.navBarLinks('contact');scrollToID('contact')">
 					تواصل معنا
@@ -101,7 +117,6 @@
 						href="https://github.com/AbdelrahmanBayoumi/Azkar-App"
 						target="_blank"
 					>
-						<!-- <img src="assets/images/github.svg" alt="GitHub" loading="lazy"> -->
 						<i class="icon-github"></i>
 					</a>
 				</li>
