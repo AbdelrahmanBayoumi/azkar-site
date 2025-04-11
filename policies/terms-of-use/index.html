@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="شروط استخدام تطبيق وموقع أذكار، توضح القواعد والضوابط لاستخدام الخدمات المقدمة."
+    />
+    <meta name="author" content="Azkar App" />
+    <meta
+      name="keywords"
+      content="Azkar, Azkar App, Desktop App, أذكار, برنامج أذكار, شروط الاستخدام, مواقيت الصلاة, Prayer Times, Terms of Use, MIT License"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Azkar - Terms of Use" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:title" content="Azkar - Terms of Use" />
+    <meta
+      property="og:description"
+      content="شروط استخدام تطبيق وموقع أذكار، توضح القواعد والضوابط لاستخدام الخدمات المقدمة."
+    />
+    <meta property="og:image" content="https://azkar-site.web.app/assets/images/og-image.png" />
+    <meta property="og:image:alt" content="Azkar Terms of Use" />
+
+    <link
+      rel="apple-touch-icon"
+      href="https://azkar-site.web.app/assets/images/apple-touch-icon.png"
+    />
+    <!-- favicon -->
+    <link rel="icon" type="image/svg" href="../../assets/images/Logo - Circle.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://azkar-site.web.app/assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://azkar-site.web.app/assets/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Azkar - Terms of Use</title>
+
+    <!-- main CSS -->
+    <link href="../../assets/css/general.css" rel="stylesheet" />
+    <link href="../../assets/css/design.css" rel="stylesheet" />
+
+    <style>
+      h2,
+      h3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      main section ul {
+        padding-inline-start: 40px;
+      }
+      p,
+      li {
+        line-height: 1.6;
+      }
+      .section-title {
+        text-align: center;
+        margin: 20px 0;
+      }
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0E8NJQH92R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-0E8NJQH92R');
+    </script>
+  </head>
+
+  <body id="top">
+    <!-- Navbar -->
+    <nav class="navbar" dir="rtl">
+      <ul>
+        <li class="navbar-logo" onclick="CustomEvents.navBarLinks('Home');location.href = '/'">
+          <h1>أذكار</h1>
+        </li>
+        <li class="navbar-toggle">
+          <svg viewBox="0 0 100 80" style="fill: white" width="40" height="30">
+            <rect width="100" height="15"></rect>
+            <rect y="30" width="100" height="15"></rect>
+            <rect y="60" width="100" height="15"></rect>
+          </svg>
+        </li>
+        <li class="navbar-links" onclick="CustomEvents.navBarLinks('Home');location.href = '/'">
+          الصفحة الرئيسية
+        </li>
+        <li
+          class="navbar-links"
+          onclick="CustomEvents.navBarLinks('Home#contact');window.location.href = '/#contact'"
+        >
+          تواصل معنا
+        </li>
+        <li
+          class="navbar-links"
+          onclick="CustomEvents.navBarLinks('design');window.location.href = '/design'"
+        >
+          تصميمات
+        </li>
+        <li class="navbar-links" style="padding: 5px 10px">
+          <a
+            onclick="CustomEvents.navBarLinks('facebook')"
+            href="https://www.facebook.com/azkar.application"
+            target="_blank"
+            class="hbox justify-content-center"
+          >
+            <img
+              src="../../assets/images/facebook.svg"
+              alt="facebook"
+              loading="lazy"
+              style="height: 35px"
+            />
+          </a>
+        </li>
+        <li class="navbar-links navbar-img">
+          <a
+            onclick="CustomEvents.navBarLinks('github')"
+            href="https://github.com/AbdelrahmanBayoumi/Azkar-App"
+            target="_blank"
+            class="hbox justify-content-center"
+          >
+            <i class="icon-github"></i>
+          </a>
+        </li>
+        <li
+          class="navbar-links download-button"
+          onclick="CustomEvents.navBarLinks('download');window.location.href = '/#download'"
+        >
+          تحميل
+          <i style="padding-right: 10px; font-size: 25px" class="icon-download"></i>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <h2 class="section-title" dir="auto">شروط الاستخدام - Terms of Use</h2>
+    </header>
+
+    <main style="max-width: 900px; margin: 0 auto; padding: 0 20px">
+      <!-- Arabic Section -->
+      <section dir="rtl" style="margin-block: 25px">
+        <p>
+          مرحبًا بكم في تطبيق وموقع <strong>أذكار</strong> (“الخدمة”). باستخدامكم للخدمات التي
+          نقدمها، فإنكم توافقون على الالتزام بشروط الاستخدام التالية. إذا لم توافقوا على هذه الشروط،
+          فيُرجى عدم استخدام الموقع أو التطبيق.
+        </p>
+
+        <h3>1. التعريف بالخدمة</h3>
+        <ul>
+          <li>
+            تطبيق أذكار (سطح المكتب) يختص بتذكيركم بالأذكار ومواعيد الصلاة مع توفير إمكانية تخصيص
+            الإشعارات والأصوات.
+          </li>
+          <li>
+            موقع أذكار هو الصفحة التعريفية التي تتيح معلومات حول التطبيق وروابط التحميل، مع نموذج
+            تواصل لتلقي الاستفسارات والاقتراحات.
+          </li>
+        </ul>
+
+        <h3>2. الترخيص واستخدام الشفرة المفتوحة المصدر (MIT License)</h3>
+        <ul>
+          <li>
+            الكود المصدري للتطبيق متاح على
+            <a href="https://github.com/AbdelrahmanBayoumi/Azkar-App" target="_blank">GitHub</a>
+            بموجب ترخيص <strong>MIT</strong>، ما يسمح لكم بالاطلاع على الشفرة وتعديلها وتوزيعها وفق
+            بنود هذا الترخيص.
+          </li>
+          <li>
+            يُرجى ملاحظة أن عناصر الهوية البصرية والمحتوى الصوتي والمرئي (الشعارات، التصميمات،
+            الصوتيات) قد لا تكون مضمّنة تحت ترخيص MIT إذا لم يُنص على ذلك صراحةً. تظل تلك العناصر
+            مملوكة لصاحب التطبيق أو الجهات المرخِّصة.
+          </li>
+          <li>
+            إن استخدامكم لشفرة التطبيق بموجب MIT License لا يخلّ بأي حقوق محفوظة للعلامة التجارية أو
+            المواد المتعددة الوسائط إلا ضمن الشروط التي يسمح بها أصحابها.
+          </li>
+        </ul>
+
+        <h3>3. نطاق استخدام التطبيق والموقع</h3>
+        <ul>
+          <li>
+            يُحظر عليكم إعادة نشر التطبيق نفسه بشكل “مغلق” أو استغلال الموقع لأي غرض غير قانوني أو
+            غير مُصرَّح به.
+          </li>
+          <li>تتحملون مسؤولية الالتزام بالقوانين المحلية والدولية عند استخدام التطبيق والموقع.</li>
+          <li>
+            يُرجى عدم رفع أو إرسال أي محتوى يُخالف الآداب العامة أو ينتهك حقوق الآخرين عبر نموذج
+            التواصل الموجود في الموقع.
+          </li>
+        </ul>
+
+        <h3>4. إخلاء المسؤولية</h3>
+        <p>
+          يتم توفير التطبيق والموقع “كما هو” دون أي ضمان صريح أو ضمني حول الملاءمة لغرض معين أو
+          خلوهما من الأخطاء أو التوقفات. لا نتحمل أي مسؤولية عن أي أضرار قد تنشأ جراء استخدامكم
+          للخدمة أو عدم القدرة على استخدامها.
+        </p>
+
+        <h3>5. التعديلات على الخدمة</h3>
+        <p>
+          نحتفظ بالحق في تعديل التطبيق أو الموقع أو إيقاف جزء منهما أو إضافتهما في أي وقت دون إشعار
+          مُسبق. إن استمراركم في استخدام الخدمة بعد أي تعديل يُعتبر موافقة ضمنية على تلك التعديلات.
+        </p>
+
+        <h3>6. سياسة الخصوصية</h3>
+        <p>
+          تحكم سياسة الخصوصية الخاصة بنا كيفية جمع بيانات المستخدمين واستخدامها. ننصحكم بمراجعتها
+          على رابط
+          <a href="../privacy-policy/">سياسة الخصوصية</a>.
+        </p>
+
+        <h3>7. القانون الحاكم وحل النزاعات</h3>
+        <p>
+          تخضع هذه الشروط للقوانين المعمول بها في المنطقة أو الدولة الخاصة بنا، ويُحل أي نزاع أمام
+          المحاكم المختصة في تلك المنطقة. إذا كانت لديكم أي استفسارات قانونية، يُرجى التواصل معنا
+          عبر البريد الإلكتروني المذكور أدناه.
+        </p>
+
+        <h3>8. تواصل معنا</h3>
+        <p>
+          لأي استفسارات حول شروط الاستخدام، يُمكنكم التواصل عبر البريد الإلكتروني:
+          <a href="mailto:azkar.application@gmail.com" onclick="CustomEvents.navBarLinks('email')"
+            >azkar.application@gmail.com</a
+          >
+          أو عبر نموذج التواصل في الصفحة الرئيسية.
+        </p>
+      </section>
+
+      <hr />
+
+      <!-- English Section -->
+      <section lang="en" style="margin-block: 25px">
+        <p>
+          Welcome to the <strong>Azkar</strong> application and website (“Service”). By using our
+          services, you agree to be bound by the following Terms of Use. If you do not accept these
+          terms, please do not use the website or the application.
+        </p>
+
+        <h3>1. Service Description</h3>
+        <ul>
+          <li>
+            The Azkar Desktop application provides reminders for Adhkar (Islamic supplications) and
+            prayer times, along with customizable notifications and audio settings.
+          </li>
+          <li>
+            The Azkar website serves as a landing page offering information about the app, download
+            links, and a contact form for inquiries and suggestions.
+          </li>
+        </ul>
+
+        <h3>2. Open-Source Code & MIT License</h3>
+        <ul>
+          <li>
+            The source code for the Azkar Desktop application is available on
+            <a href="https://github.com/AbdelrahmanBayoumi/Azkar-App" target="_blank">GitHub</a>
+            under the <strong>MIT License</strong>. This license allows you to view, modify, and
+            distribute the code under the terms stated therein.
+          </li>
+          <li>
+            Please note that branding elements (logos, images, or audio content) may not be covered
+            by the MIT License unless explicitly stated. Ownership of such assets remains with the
+            app owner or respective licensors.
+          </li>
+          <li>
+            Your use of the code under the MIT License does not negate any rights related to the
+            trademark or multimedia content, except as permitted by the owners.
+          </li>
+        </ul>
+
+        <h3>3. Scope of Use</h3>
+        <ul>
+          <li>
+            You are prohibited from republishing the application in a “closed” form or using the
+            website for any unlawful or unauthorized purpose.
+          </li>
+          <li>
+            You bear responsibility for complying with local and international laws when using the
+            application and the website.
+          </li>
+          <li>
+            Do not upload or submit any content that is inappropriate, harmful, or infringes on
+            others’ rights through the website’s contact form.
+          </li>
+        </ul>
+
+        <h3>4. Disclaimer</h3>
+        <p>
+          The application and the website are provided “as is,” without any express or implied
+          warranty regarding fitness for a particular purpose or freedom from errors or
+          interruptions. We assume no liability for any damages resulting from your use or inability
+          to use the Service.
+        </p>
+
+        <h3>5. Modifications to the Service</h3>
+        <p>
+          We reserve the right to modify or discontinue parts of the application or the website at
+          any time without prior notice. Your continued use of the Service following any changes
+          constitutes your acceptance of those modifications.
+        </p>
+
+        <h3>6. Privacy Policy</h3>
+        <p>
+          Our Privacy Policy governs how we collect and use user data. Please review it at:
+          <a href="../privacy-policy/">Privacy Policy</a>.
+        </p>
+
+        <h3>7. Governing Law & Dispute Resolution</h3>
+        <p>
+          These terms are governed by the laws of our applicable jurisdiction, and any dispute shall
+          be resolved before the competent courts in that region. If you have any legal questions,
+          please contact us via the email listed below.
+        </p>
+
+        <h3>8. Contact Us</h3>
+        <p>
+          For any questions regarding these Terms of Use, please contact us at:
+          <a href="mailto:azkar.application@gmail.com" onclick="CustomEvents.navBarLinks('email')"
+            >azkar.application@gmail.com</a
+          >
+          or use the contact form on the homepage.
+        </p>
+      </section>
+    </main>
+
+    <footer style="text-align: center">
+      <span>© 2025 Azkar</span>
+    </footer>
+
+    <!-- Optional JS -->
+    <script src="../../assets/js/general.js"></script>
+  </body>
+</html>
