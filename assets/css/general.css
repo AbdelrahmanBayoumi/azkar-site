@@ -5,219 +5,224 @@
 /* cairo-600 - latin_arabic */
 
 @font-face {
-	font-family: 'Cairo';
-	font-style: normal;
-	font-weight: 600;
-	src: url('../fonts/cairo-v10-latin_arabic-600.eot');
-	/* IE9 Compat Modes */
-	src: local(''), url('../fonts/cairo-v10-latin_arabic-600.eot?#iefix') format('embedded-opentype'),
-		/* IE6-IE8 */ url('../fonts/cairo-v10-latin_arabic-600.woff2') format('woff2'),
-		/* Super Modern Browsers */ url('../fonts/cairo-v10-latin_arabic-600.woff') format('woff'),
-		/* Modern Browsers */ url('../fonts/cairo-v10-latin_arabic-600.ttf') format('truetype'),
-		/* Safari, Android, iOS */ url('../fonts/cairo-v10-latin_arabic-600.svg#Cairo') format('svg');
-	/* Legacy iOS */
-	font-display: swap;
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/cairo-v10-latin_arabic-600.eot');
+  /* IE9 Compat Modes */
+  src:
+    local(''),
+    url('../fonts/cairo-v10-latin_arabic-600.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../fonts/cairo-v10-latin_arabic-600.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../fonts/cairo-v10-latin_arabic-600.woff') format('woff'),
+    /* Modern Browsers */ url('../fonts/cairo-v10-latin_arabic-600.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('../fonts/cairo-v10-latin_arabic-600.svg#Cairo') format('svg');
+  /* Legacy iOS */
+  font-display: swap;
 }
 
 /* cairo-700 - latin_arabic */
 
 @font-face {
-	font-family: 'Cairo';
-	font-style: normal;
-	font-weight: 700;
-	src: url('../fonts/cairo-v10-latin_arabic-700.eot');
-	/* IE9 Compat Modes */
-	src: local(''), url('../fonts/cairo-v10-latin_arabic-700.eot?#iefix') format('embedded-opentype'),
-		/* IE6-IE8 */ url('../fonts/cairo-v10-latin_arabic-700.woff2') format('woff2'),
-		/* Super Modern Browsers */ url('../fonts/cairo-v10-latin_arabic-700.woff') format('woff'),
-		/* Modern Browsers */ url('../fonts/cairo-v10-latin_arabic-700.ttf') format('truetype'),
-		/* Safari, Android, iOS */ url('../fonts/cairo-v10-latin_arabic-700.svg#Cairo') format('svg');
-	/* Legacy iOS */
-	font-display: swap;
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/cairo-v10-latin_arabic-700.eot');
+  /* IE9 Compat Modes */
+  src:
+    local(''),
+    url('../fonts/cairo-v10-latin_arabic-700.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('../fonts/cairo-v10-latin_arabic-700.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('../fonts/cairo-v10-latin_arabic-700.woff') format('woff'),
+    /* Modern Browsers */ url('../fonts/cairo-v10-latin_arabic-700.ttf') format('truetype'),
+    /* Safari, Android, iOS */ url('../fonts/cairo-v10-latin_arabic-700.svg#Cairo') format('svg');
+  /* Legacy iOS */
+  font-display: swap;
 }
 
 /* --- Icons Font Import ---- */
 
 @font-face {
-	font-family: 'icomoon';
-	src: url('../fonts/icon/icomoon.eot?420i43');
-	src: url('../fonts/icon/icomoon.eot?420i43#iefix') format('embedded-opentype'),
-		url('../fonts/icon/icomoon.ttf?420i43') format('truetype'),
-		url('../fonts/icon/icomoon.woff?420i43') format('woff'),
-		url('../fonts/icon/icomoon.svg?420i43#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+  font-family: 'icomoon';
+  src: url('../fonts/icon/icomoon.eot?420i43');
+  src:
+    url('../fonts/icon/icomoon.eot?420i43#iefix') format('embedded-opentype'),
+    url('../fonts/icon/icomoon.ttf?420i43') format('truetype'),
+    url('../fonts/icon/icomoon.woff?420i43') format('woff'),
+    url('../fonts/icon/icomoon.svg?420i43#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 [class^='icon-'],
 [class*=' icon-'] {
-	/* use !important to prevent issues with browser extensions that change fonts */
-	font-family: 'icomoon' !important;
-	/* speak: never; */
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	/* Enable Ligatures ================ */
-	letter-spacing: 0;
-	-webkit-font-feature-settings: 'liga';
-	-moz-font-feature-settings: 'liga=1';
-	-moz-font-feature-settings: 'liga';
-	-ms-font-feature-settings: 'liga' 1;
-	font-feature-settings: 'liga';
-	-webkit-font-variant-ligatures: discretionary-ligatures;
-	font-variant-ligatures: discretionary-ligatures;
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  /* speak: never; */
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: 'liga';
+  -moz-font-feature-settings: 'liga=1';
+  -moz-font-feature-settings: 'liga';
+  -ms-font-feature-settings: 'liga' 1;
+  font-feature-settings: 'liga';
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .icon-sound-alt:before {
-	content: '\e903';
+  content: '\e903';
 }
 
 .icon-speaker:before {
-	content: '\e903';
+  content: '\e903';
 }
 
 .icon-volume:before {
-	content: '\e903';
+  content: '\e903';
 }
 
 .icon-location:before {
-	content: '\e904';
+  content: '\e904';
 }
 
 .icon-map-marker:before {
-	content: '\e904';
+  content: '\e904';
 }
 
 .icon-marker:before {
-	content: '\e904';
+  content: '\e904';
 }
 
 .icon-pin:before {
-	content: '\e904';
+  content: '\e904';
 }
 
 .icon-cog:before {
-	content: '\e905';
+  content: '\e905';
 }
 
 .icon-gear:before {
-	content: '\e905';
+  content: '\e905';
 }
 
 .icon-preferences:before {
-	content: '\e905';
+  content: '\e905';
 }
 
 .icon-settings:before {
-	content: '\e905';
+  content: '\e905';
 }
 
 .icon-generate:before {
-	content: '\e905';
+  content: '\e905';
 }
 
 .icon-control:before {
-	content: '\e905';
+  content: '\e905';
 }
 
 .icon-options:before {
-	content: '\e905';
+  content: '\e905';
 }
 
 .icon-github:before {
-	content: '\e906';
+  content: '\e906';
 }
 
 .icon-brand:before {
-	content: '\e906';
+  content: '\e906';
 }
 
 .icon-octacat:before {
-	content: '\e906';
+  content: '\e906';
 }
 
 .icon-social:before {
-	content: '\e906';
+  content: '\e906';
 }
 
 .icon-clock:before {
-	content: '\e94e';
+  content: '\e94e';
 }
 
 .icon-arrow-down-circle:before {
-	content: '\e907';
+  content: '\e907';
 }
 
 .icon-windows:before {
-	content: '\e901';
+  content: '\e901';
 }
 
 .icon-download:before {
-	content: '\e902';
+  content: '\e902';
 }
 
 .icon-check-circle:before {
-	content: '\e900';
+  content: '\e900';
 }
 
 /* ============================================ */
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Cairo', 'Arial', sans-serif, Courier, monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', 'Arial', sans-serif, Courier, monospace;
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 :root {
-	--bg-color: #f5f7fe;
-	--light-blue: #5296cf;
-	--dark-primary: #33485d;
-	--bg-color: #f5f7fe;
-	--green: #28a745;
-	--teal: #20c997;
+  --bg-color: #f5f7fe;
+  --light-blue: #5296cf;
+  --dark-primary: #33485d;
+  --bg-color: #f5f7fe;
+  --green: #28a745;
+  --teal: #20c997;
 }
 
 body {
-	background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 
 /* -- General Classes */
 
 .vbox {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .hbox {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .justify-content-center {
-	justify-content: center;
+  justify-content: center;
 }
 
 .align-items-center {
-	align-items: center;
+  align-items: center;
 }
 
 .g-10 {
-	gap: 10px;
+  gap: 10px;
 }
 
 .g-20 {
-	gap: 20px;
+  gap: 20px;
 }
 
 /* === ScrollBar === */
@@ -225,153 +230,156 @@ body {
 /* width */
 
 ::-webkit-scrollbar {
-	width: 10px;
+  width: 10px;
 }
 
 /* Track */
 
 ::-webkit-scrollbar-track {
-	background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-	background: #888;
-	/* border-radius: 5px */
+  background: #888;
+  /* border-radius: 5px */
 }
 
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #555;
+  background: #555;
 }
 
 /* ------ NavBar ------ */
 
 .navbar {
-	position: sticky;
-	top: 0;
-	box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.26);
-	z-index: 1000;
-	/* transition: all ease 0.5s; */
+  position: sticky;
+  top: 0;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.26);
+  z-index: 1000;
+  /* transition: all ease 0.5s; */
 }
 
 .navbar ul {
-	display: flex;
-	width: 100%;
-	align-items: center;
-	background-color: var(--dark-primary);
-	color: white;
-	gap: 5px;
-	padding: 5px 30px 5px 10px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: var(--dark-primary);
+  color: white;
+  gap: 5px;
+  padding: 5px 30px 5px 10px;
 }
 
 .navbar li {
-	align-self: center;
-	list-style-type: none;
-	user-select: none;
+  align-self: center;
+  list-style-type: none;
+  user-select: none;
 }
 
 .navbar a {
-	text-decoration: none;
-	color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .navbar-logo {
-	flex: 1;
-	font-size: 2rem;
-	font-weight: bold;
-	user-select: none;
-	cursor: pointer;
+  flex: 1;
+  font-size: 2rem;
+  font-weight: bold;
+  user-select: none;
+  cursor: pointer;
 }
 
 .navbar-logo h1 {
-	font-size: 2rem;
+  font-size: 2rem;
 }
 
 .navbar-toggle {
-	display: none;
-	cursor: pointer;
+  display: none;
+  cursor: pointer;
 }
 
 .navbar-links {
-	padding: 7px 20px;
-	cursor: pointer;
-	transition: all ease 0.3s;
+  padding: 7px 20px;
+  cursor: pointer;
+  transition: all ease 0.3s;
 }
 
 .navbar-links:hover {
-	background-color: var(--light-blue);
-	border-radius: 10px;
+  background-color: var(--light-blue);
+  border-radius: 10px;
 }
 
 .navbar-img img {
-	width: 30px;
-	height: 30px;
-	/* filter: invert(1); */
+  width: 30px;
+  height: 30px;
+  /* filter: invert(1); */
 }
 
 .navbar-img i {
-	font-size: 30px;
+  font-size: 30px;
 }
 
 .download-button {
-	text-align: center;
-	user-select: none;
-	color: #fff;
-	background-color: #5296cf85;
-	border: 1px solid transparent;
-	border-radius: 10px;
-	font-size: 1.1rem;
-	display: flex;
-	align-items: center;
+  text-align: center;
+  user-select: none;
+  color: #fff;
+  background-color: #5296cf85;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
 }
 
 .lang {
-	background-color: #2737488a;
-	border-radius: 10px;
-	display: flex;
-	gap: 10px;
+  background-color: #2737488a;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 /* --- Buttons --- */
 
 .btn {
-	display: inline-block;
-	font-weight: 400;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: middle;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	border: 1 px solid transparent;
-	padding: 0.375rem 0.75rem;
-	font-size: 1rem;
-	line-height: 1.5;
-	border-radius: 0.25rem;
-	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-		box-shadow 0.15s ease-in-out;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1 px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 
 .btn-primary {
-	color: #fff;
-	background-color: #007bff;
-	border-color: #007bff;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
 /* --- Footer --- */
 
 footer {
-	margin-top: 30px;
-	background-color: var(--dark-primary);
-	color: #fff;
-	padding: 20px;
-	width: 100%;
-	text-align: center;
-	text-transform: uppercase;
+  margin-top: 30px;
+  background-color: var(--dark-primary);
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* --- popup modal --- */
@@ -379,150 +387,150 @@ footer {
 /* The Modal (background) */
 
 .modal {
-	display: none;
-	/* Hidden by default */
-	position: fixed;
-	/* Stay in place */
-	z-index: 1200;
-	/* Sit on top */
-	padding-top: 100px;
-	/* Location of the box */
-	left: 0;
-	top: 0;
-	width: 100%;
-	/* Full width */
-	height: 100%;
-	/* Full height */
-	overflow: auto;
-	/* Enable scroll if needed */
-	background-color: rgb(0, 0, 0);
-	/* Fallback color */
-	background-color: rgba(0, 0, 0, 0.9);
-	/* Black w/ opacity */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1200;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
 
 .modal-content {
-	margin: auto;
-	display: block;
-	width: 80%;
-	max-width: 600px;
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 600px;
 }
 
 /* Caption of Modal Image */
 
 #caption {
-	margin: auto;
-	display: block;
-	width: 80%;
-	max-width: 700px;
-	text-align: center;
-	color: #ccc;
-	padding: 10px 0;
-	/* height: 150px; */
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  /* height: 150px; */
 }
 
 #caption a {
-	color: #fff;
+  color: #fff;
 }
 
 /* Add Animation */
 
 .modal-content,
 #caption {
-	-webkit-animation-name: zoom;
-	-webkit-animation-duration: 0.6s;
-	animation-name: zoom;
-	animation-duration: 0.6s;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
 }
 
 @-webkit-keyframes zoom {
-	from {
-		-webkit-transform: scale(0);
-	}
-	to {
-		-webkit-transform: scale(1);
-	}
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
 
 @keyframes zoom {
-	from {
-		transform: scale(0);
-	}
-	to {
-		transform: scale(1);
-	}
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* The Close Button */
 
 .close {
-	position: absolute;
-	top: 15px;
-	right: 35px;
-	color: #f1f1f1;
-	font-size: 40px;
-	font-weight: bold;
-	transition: 0.3s;
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .close:hover,
 .close:focus {
-	color: #bbb;
-	text-decoration: none;
-	cursor: pointer;
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
-	.modal-content {
-		width: 90%;
-	}
+  .modal-content {
+    width: 90%;
+  }
 }
 
 @media (max-width: 690px) {
-	.navbar ul {
-		flex-wrap: wrap;
-		padding: 5px 20px 5px 20px;
-		gap: 10px;
-	}
-	.navbar-toggle {
-		display: flex;
-	}
-	.navbar-links {
-		display: none;
-		width: 100%;
-		text-align: center;
-	}
-	.active {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	.lang.active {
-		display: flex;
-		justify-content: center;
-	}
+  .navbar ul {
+    flex-wrap: wrap;
+    padding: 5px 20px 5px 20px;
+    gap: 10px;
+  }
+  .navbar-toggle {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+  .active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lang.active {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .animated-border-fill-button {
-	position: relative;
+  position: relative;
 }
 
 .animated-border-fill-button svg {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .animated-border-fill-button rect {
-	animation: button-border 5s infinite both;
+  animation: button-border 5s infinite both;
 }
 
 @keyframes button-border {
-	to {
-		stroke-dashoffset: 0;
-	}
+  to {
+    stroke-dashoffset: 0;
+  }
 }

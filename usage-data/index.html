@@ -1,256 +1,273 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="تعرف على آلية جمع بيانات الاستخدام في برنامج أذكار (سطح المكتب)." />
-		<meta name="author" content="Azkar App" />
-		<meta
-			name="keywords"
-			content="Azkar, Azkar App, Desktop App, أذكار, برنامج أذكار, برنامج كمبيوتر إسلامي, مواقيت الصلاة, Prayer Times, Usage Data, Data Collection"
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- Open Graph Meta Tags -->
-		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Azkar - Usage Data" />
-		<meta property="og:locale" content="ar_AR" />
-		<meta property="og:title" content="Azkar - Usage Data" />
-		<meta property="og:description" content="تعرف على آلية جمع بيانات الاستخدام في برنامج أذكار (سطح المكتب)." />
-		<!-- يمكنك استبدال هذا الرابط بصورة مناسبة للصفحة -->
-		<meta property="og:image" content="https://azkar-site.web.app/assets/images/og-image.png" />
-		<meta property="og:image:alt" content="Azkar Usage Data" />
-		<link rel="apple-touch-icon" href="https://azkar-site.web.app/assets/images/apple-touch-icon.png" />
-		<!-- favicon -->
-		<link rel="icon" type="image/svg" href="../assets/images/Logo - Circle.svg" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="https://azkar-site.web.app/assets/images/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="https://azkar-site.web.app/assets/images/favicon-16x16.png"
-		/>
-		<link rel="manifest" href="/site.webmanifest" />
-		<title>Azkar - Usage Data</title>
-		<!-- main CSS (حسب الترتيب والتنظيم عندك) -->
-		<link href="../assets/css/general.css" rel="stylesheet" />
-		<link href="../assets/css/design.css" rel="stylesheet" />
-		<style>
-			h3 {
-				margin-top: 20px;
-				margin-bottom: 5px;
-			}
-		</style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="تعرف على آلية جمع بيانات الاستخدام في برنامج أذكار (سطح المكتب)."
+    />
+    <meta name="author" content="Azkar App" />
+    <meta
+      name="keywords"
+      content="Azkar, Azkar App, Desktop App, أذكار, برنامج أذكار, برنامج كمبيوتر إسلامي, مواقيت الصلاة, Prayer Times, Usage Data, Data Collection"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Azkar - Usage Data" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:title" content="Azkar - Usage Data" />
+    <meta
+      property="og:description"
+      content="تعرف على آلية جمع بيانات الاستخدام في برنامج أذكار (سطح المكتب)."
+    />
+    <!-- يمكنك استبدال هذا الرابط بصورة مناسبة للصفحة -->
+    <meta property="og:image" content="https://azkar-site.web.app/assets/images/og-image.png" />
+    <meta property="og:image:alt" content="Azkar Usage Data" />
+    <link
+      rel="apple-touch-icon"
+      href="https://azkar-site.web.app/assets/images/apple-touch-icon.png"
+    />
+    <!-- favicon -->
+    <link rel="icon" type="image/svg" href="../assets/images/Logo - Circle.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://azkar-site.web.app/assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://azkar-site.web.app/assets/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Azkar - Usage Data</title>
+    <!-- main CSS (حسب الترتيب والتنظيم عندك) -->
+    <link href="../assets/css/general.css" rel="stylesheet" />
+    <link href="../assets/css/design.css" rel="stylesheet" />
+    <style>
+      h3 {
+        margin-top: 20px;
+        margin-bottom: 5px;
+      }
+    </style>
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0E8NJQH92R"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
-			gtag('config', 'G-0E8NJQH92R');
-		</script>
-	</head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0E8NJQH92R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-0E8NJQH92R');
+    </script>
+  </head>
 
-	<body id="top">
-		<nav class="navbar" dir="rtl">
-			<ul>
-				<li class="navbar-logo" onclick="CustomEvents.navBarLinks('Home');location.href = '/'">
-					<h1>أذكار</h1>
-				</li>
-				<li class="navbar-toggle">
-					<svg viewBox="0 0 100 80" style="fill: white" width="40" height="30">
-						<rect width="100" height="15"></rect>
-						<rect y="30" width="100" height="15"></rect>
-						<rect y="60" width="100" height="15"></rect>
-					</svg>
-				</li>
-				<li class="navbar-links" onclick="CustomEvents.navBarLinks('Home');location.href = '/'">
-					الصفحة الرئيسية
-				</li>
-				<li
-					class="navbar-links"
-					onclick="CustomEvents.navBarLinks('Home#contact');window.location.href = '/#contact'"
-				>
-					تواصل معنا
-				</li>
-				<li class="navbar-links" onclick="window.location.href = '/design'">تصميمات</li>
-				<li class="navbar-links" style="padding: 5px 10px">
-					<a
-						onclick="CustomEvents.navBarLinks('facebook')"
-						class="hbox justify-content-center"
-						href="https://www.facebook.com/azkar.application"
-						target="_blank"
-					>
-						<img src="../assets/images/facebook.svg" alt="facebook" loading="lazy" style="height: 35px" />
-					</a>
-				</li>
-				<li class="navbar-links navbar-img">
-					<a
-						onclick="CustomEvents.navBarLinks('github')"
-						class="hbox justify-content-center"
-						href="https://github.com/AbdelrahmanBayoumi/Azkar-App"
-						target="_blank"
-					>
-						<i class="icon-github"></i>
-					</a>
-				</li>
-				<li
-					class="navbar-links download-button"
-					onclick="CustomEvents.navBarLinks('download');window.location.href = '/#download'"
-				>
-					تحميل
-					<i style="padding-right: 10px; font-size: 25px" class="icon-download"></i>
-				</li>
-			</ul>
-		</nav>
+  <body id="top">
+    <nav class="navbar" dir="rtl">
+      <ul>
+        <li class="navbar-logo" onclick="CustomEvents.navBarLinks('Home');location.href = '/'">
+          <h1>أذكار</h1>
+        </li>
+        <li class="navbar-toggle">
+          <svg viewBox="0 0 100 80" style="fill: white" width="40" height="30">
+            <rect width="100" height="15"></rect>
+            <rect y="30" width="100" height="15"></rect>
+            <rect y="60" width="100" height="15"></rect>
+          </svg>
+        </li>
+        <li class="navbar-links" onclick="CustomEvents.navBarLinks('Home');location.href = '/'">
+          الصفحة الرئيسية
+        </li>
+        <li
+          class="navbar-links"
+          onclick="CustomEvents.navBarLinks('Home#contact');window.location.href = '/#contact'"
+        >
+          تواصل معنا
+        </li>
+        <li class="navbar-links" onclick="window.location.href = '/design'">تصميمات</li>
+        <li class="navbar-links" style="padding: 5px 10px">
+          <a
+            onclick="CustomEvents.navBarLinks('facebook')"
+            class="hbox justify-content-center"
+            href="https://www.facebook.com/azkar.application"
+            target="_blank"
+          >
+            <img
+              src="../assets/images/facebook.svg"
+              alt="facebook"
+              loading="lazy"
+              style="height: 35px"
+            />
+          </a>
+        </li>
+        <li class="navbar-links navbar-img">
+          <a
+            onclick="CustomEvents.navBarLinks('github')"
+            class="hbox justify-content-center"
+            href="https://github.com/AbdelrahmanBayoumi/Azkar-App"
+            target="_blank"
+          >
+            <i class="icon-github"></i>
+          </a>
+        </li>
+        <li
+          class="navbar-links download-button"
+          onclick="CustomEvents.navBarLinks('download');window.location.href = '/#download'"
+        >
+          تحميل
+          <i style="padding-right: 10px; font-size: 25px" class="icon-download"></i>
+        </li>
+      </ul>
+    </nav>
 
-		<header>
-			<h2 style="text-align: center; margin: 20px 0" dir="auto">بيانات الاستخدام - Usage Data</h2>
-		</header>
+    <header>
+      <h2 style="text-align: center; margin: 20px 0" dir="auto">بيانات الاستخدام - Usage Data</h2>
+    </header>
 
-		<main style="max-width: 900px; margin: 0 auto; padding: 0 15px">
-			<section dir="rtl" style="margin-block: 25px">
-				<p>
-					يهدف <strong>تطبيق أذكار</strong> إلى تزويدك بتجربة سلسة ومفيدة لذكر الله في كل حين، مع توفير مواقيت
-					الصلاة والتذكيرات اللازمة.
-				</p>
-				<p>
-					لجعل التطبيق أكثر استقرارًا وتطورًا، نحتاج إلى جمع بعض البيانات التقنية (بيانات الاستخدام) التي
-					تساعدنا في تحسين الأداء واكتشاف المشاكل.
-				</p>
+    <main style="max-width: 900px; margin: 0 auto; padding: 0 15px">
+      <section dir="rtl" style="margin-block: 25px">
+        <p>
+          يهدف <strong>تطبيق أذكار</strong> إلى تزويدك بتجربة سلسة ومفيدة لذكر الله في كل حين، مع
+          توفير مواقيت الصلاة والتذكيرات اللازمة.
+        </p>
+        <p>
+          لجعل التطبيق أكثر استقرارًا وتطورًا، نحتاج إلى جمع بعض البيانات التقنية (بيانات الاستخدام)
+          التي تساعدنا في تحسين الأداء واكتشاف المشاكل.
+        </p>
 
-				<h3>لماذا نجمع بيانات الاستخدام؟</h3>
-				<ul>
-					<li>تحسين أداء التطبيق وتطوير ميزاته.</li>
-					<li>اكتشاف الأخطاء (Debugging) ومعالجتها بسرعة.</li>
-					<li>فهم أنماط الاستخدام وتسهيل تجربة المستخدم.</li>
-				</ul>
+        <h3>لماذا نجمع بيانات الاستخدام؟</h3>
+        <ul>
+          <li>تحسين أداء التطبيق وتطوير ميزاته.</li>
+          <li>اكتشاف الأخطاء (Debugging) ومعالجتها بسرعة.</li>
+          <li>فهم أنماط الاستخدام وتسهيل تجربة المستخدم.</li>
+        </ul>
 
-				<h3>ما نوع البيانات التي نجمعها؟</h3>
-				<ul>
-					<li>
-						بيانات نظام التشغيل والبيئة مثل إصدار التطبيق، نوع المعمارية، إصدار جافا، واسم نظام التشغيل.
-					</li>
-					<li>
-						إعدادات وتفضيلات التطبيق مثل اللغة المفضلة، موقع عام (المدينة/الدولة)، إعدادات الأذان، مستوى
-						الصوت، وغيرها من الخيارات التي تضبطها بنفسك.
-					</li>
-					<li>
-						<strong>معرف عشوائي (UUID)</strong>
-						يُستخدم لتمييز كل جهاز بشكل مجهول، دون الكشف عن الهوية الشخصية.
-					</li>
-				</ul>
+        <h3>ما نوع البيانات التي نجمعها؟</h3>
+        <ul>
+          <li>
+            بيانات نظام التشغيل والبيئة مثل إصدار التطبيق، نوع المعمارية، إصدار جافا، واسم نظام
+            التشغيل.
+          </li>
+          <li>
+            إعدادات وتفضيلات التطبيق مثل اللغة المفضلة، موقع عام (المدينة/الدولة)، إعدادات الأذان،
+            مستوى الصوت، وغيرها من الخيارات التي تضبطها بنفسك.
+          </li>
+          <li>
+            <strong>معرف عشوائي (UUID)</strong>
+            يُستخدم لتمييز كل جهاز بشكل مجهول، دون الكشف عن الهوية الشخصية.
+          </li>
+        </ul>
 
-				<h3>هل يتم جمع معلومات شخصية؟</h3>
-				<p>
-					<strong>لا</strong>. لا نجمع أي معلومات تحدد هويتك مثل الاسم أو البريد الإلكتروني أو أي بيانات
-					مالية. هدفنا الوحيد هو جمع معلومات فنية تساعد في تعزيز تجربة استخدام التطبيق.
-				</p>
+        <h3>هل يتم جمع معلومات شخصية؟</h3>
+        <p>
+          <strong>لا</strong>. لا نجمع أي معلومات تحدد هويتك مثل الاسم أو البريد الإلكتروني أو أي
+          بيانات مالية. هدفنا الوحيد هو جمع معلومات فنية تساعد في تعزيز تجربة استخدام التطبيق.
+        </p>
 
-				<h3>هل يمكنني إيقاف جمع البيانات؟</h3>
-				<p>
-					بالطبع. يوفر التطبيق خيارًا في الإعدادات تحت اسم
-					<strong>“مشاركة بيانات الاستخدام”</strong>، ويمكنك تعطيله في أي وقت. عند التعطيل، لن نقوم بإرسال أي
-					معلومات إحصائية غير ضرورية.
-				</p>
+        <h3>هل يمكنني إيقاف جمع البيانات؟</h3>
+        <p>
+          بالطبع. يوفر التطبيق خيارًا في الإعدادات تحت اسم
+          <strong>“مشاركة بيانات الاستخدام”</strong>، ويمكنك تعطيله في أي وقت. عند التعطيل، لن نقوم
+          بإرسال أي معلومات إحصائية غير ضرورية.
+        </p>
 
-				<h3>كيف نستخدم البيانات ونحميها؟</h3>
-				<ul>
-					<li>نستخدمها <em>لتحليل الإحصائيات</em> وتحسين التطبيق.</li>
-					<li>
-						لا نشارك البيانات مع أي طرف ثالث. البيانات تبقى في خوادمنا الخاصة لغرض التحليل والتحسين فقط.
-					</li>
-				</ul>
+        <h3>كيف نستخدم البيانات ونحميها؟</h3>
+        <ul>
+          <li>نستخدمها <em>لتحليل الإحصائيات</em> وتحسين التطبيق.</li>
+          <li>
+            لا نشارك البيانات مع أي طرف ثالث. البيانات تبقى في خوادمنا الخاصة لغرض التحليل والتحسين
+            فقط.
+          </li>
+        </ul>
 
-				<h3>للتواصل والاستفسار</h3>
-				<p>
-					إن كانت لديك أي أسئلة حول جمع بيانات الاستخدام أو رغبت بمعرفة مزيد من التفاصيل، لا تتردد في التواصل
-					معنا عبر البريد الإلكتروني:
-					<a onclick="CustomEvents.navBarLinks('email');" href="mailto:azkar.application@gmail.com"
-						>azkar.application@gmail.com</a
-					>
-					أو نموذج التواصل على الصفحة الرئيسية.
-				</p>
-			</section>
+        <h3>للتواصل والاستفسار</h3>
+        <p>
+          إن كانت لديك أي أسئلة حول جمع بيانات الاستخدام أو رغبت بمعرفة مزيد من التفاصيل، لا تتردد
+          في التواصل معنا عبر البريد الإلكتروني:
+          <a onclick="CustomEvents.navBarLinks('email');" href="mailto:azkar.application@gmail.com"
+            >azkar.application@gmail.com</a
+          >
+          أو نموذج التواصل على الصفحة الرئيسية.
+        </p>
+      </section>
 
-			<hr />
+      <hr />
 
-			<section lang="en" style="margin-block: 25px">
-				<p>
-					The <strong>Azkar application</strong> aims to provide a smooth and meaningful experience in the
-					Remembrance of Allah at all times, along with accurate prayer times and helpful reminders. To keep
-					the application more stable and continuously evolving, we need to collect certain technical data
-					usage data that helps us improve performance and troubleshoot issues.
-				</p>
+      <section lang="en" style="margin-block: 25px">
+        <p>
+          The <strong>Azkar application</strong> aims to provide a smooth and meaningful experience
+          in the Remembrance of Allah at all times, along with accurate prayer times and helpful
+          reminders. To keep the application more stable and continuously evolving, we need to
+          collect certain technical data usage data that helps us improve performance and
+          troubleshoot issues.
+        </p>
 
-				<h3>Why Do We Collect Usage Data?</h3>
-				<ul>
-					<li>To enhance the app's performance and develop new features.</li>
-					<li>To quickly detect and fix errors (Debugging).</li>
-					<li>To understand usage patterns and improve the user experience.</li>
-				</ul>
+        <h3>Why Do We Collect Usage Data?</h3>
+        <ul>
+          <li>To enhance the app's performance and develop new features.</li>
+          <li>To quickly detect and fix errors (Debugging).</li>
+          <li>To understand usage patterns and improve the user experience.</li>
+        </ul>
 
-				<h3>What Kind of Data Do We Collect?</h3>
-				<ul>
-					<li>
-						Operating system and environment details such as the app version, architecture type, Java
-						version, and operating system name.
-					</li>
-					<li>
-						App settings and preferences such as preferred language, general location (city/country), Adhan
-						settings, volume levels, and any other user-defined options.
-					</li>
-					<li>
-						A <strong>randomly generated UUID</strong> to uniquely distinguish each device, without
-						revealing personal identity.
-					</li>
-				</ul>
+        <h3>What Kind of Data Do We Collect?</h3>
+        <ul>
+          <li>
+            Operating system and environment details such as the app version, architecture type,
+            Java version, and operating system name.
+          </li>
+          <li>
+            App settings and preferences such as preferred language, general location
+            (city/country), Adhan settings, volume levels, and any other user-defined options.
+          </li>
+          <li>
+            A <strong>randomly generated UUID</strong> to uniquely distinguish each device, without
+            revealing personal identity.
+          </li>
+        </ul>
 
-				<h3>Do We Collect Personal Information?</h3>
-				<p>
-					<strong>No</strong>. We do not collect any personally identifying details such as name, email, or
-					financial data. Our sole objective is to gather technical information that helps enhance the user
-					experience.
-				</p>
+        <h3>Do We Collect Personal Information?</h3>
+        <p>
+          <strong>No</strong>. We do not collect any personally identifying details such as name,
+          email, or financial data. Our sole objective is to gather technical information that helps
+          enhance the user experience.
+        </p>
 
-				<h3>Can I Disable Data Collection?</h3>
-				<p>
-					Absolutely. The app provides an option in Settings called
-					<strong>“Share Usage Data”</strong>, which you can turn off at any time. When disabled, we will not
-					send any unnecessary analytical information.
-				</p>
+        <h3>Can I Disable Data Collection?</h3>
+        <p>
+          Absolutely. The app provides an option in Settings called
+          <strong>“Share Usage Data”</strong>, which you can turn off at any time. When disabled, we
+          will not send any unnecessary analytical information.
+        </p>
 
-				<h3>How Do We Use and Protect the Data?</h3>
-				<ul>
-					<li>We use it for <em>statistical analysis</em> and improving the app.</li>
-					<li>
-						We do not share the data with third parties. It remains on our private servers for analysis and
-						enhancement only.
-					</li>
-				</ul>
+        <h3>How Do We Use and Protect the Data?</h3>
+        <ul>
+          <li>We use it for <em>statistical analysis</em> and improving the app.</li>
+          <li>
+            We do not share the data with third parties. It remains on our private servers for
+            analysis and enhancement only.
+          </li>
+        </ul>
 
-				<h3>Contact and Inquiries</h3>
-				<p>
-					If you have any questions about usage data collection or would like more details, feel free to
-					contact us via email:
-					<a onclick="CustomEvents.navBarLinks('email');" href="mailto:azkar.application@gmail.com"
-						>azkar.application@gmail.com</a
-					>
-					or through the contact form on the homepage.
-				</p>
-			</section>
-		</main>
+        <h3>Contact and Inquiries</h3>
+        <p>
+          If you have any questions about usage data collection or would like more details, feel
+          free to contact us via email:
+          <a onclick="CustomEvents.navBarLinks('email');" href="mailto:azkar.application@gmail.com"
+            >azkar.application@gmail.com</a
+          >
+          or through the contact form on the homepage.
+        </p>
+      </section>
+    </main>
 
-		<footer style="text-align: center">
-			<span>© 2025 Azkar</span>
-		</footer>
+    <footer style="text-align: center">
+      <span>© 2025 Azkar</span>
+    </footer>
 
-		<script src="../assets/js/general.js"></script>
-	</body>
+    <script src="../assets/js/general.js"></script>
+  </body>
 </html>

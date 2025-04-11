@@ -1,383 +1,409 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="description"
-			content="برنامج سطح مكتب يساعدك على: معرفة مواقيت الصلاة، ظهور إشعارات بذكر او دعاء كل فترة محددة، قراءة أذكار الصباح و المساء مع التذكير بها"
-		/>
-		<meta name="author" content="Abdelrahman Bayoumi" />
-		<meta
-			name="keywords"
-			content="Azkar, Azkar App, Desktop App, Azkar Notification, أذكار, برنامج أذكار, برنامج كمبيوتر إسلامي, مواقيت الصلاة, Prayer Times"
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- Open Graph Meta Tags -->
-		<meta property="og:type" content="website" />
-		<meta property="og:site_name" content="Azkar - أذكار" />
-		<meta property="og:locale" content="ar_AR" />
-		<meta property="og:locale:alternate" content="ar_AR" />
-		<meta property="og:url" content="https://azkar-site.web.app" />
-		<meta property="og:title" content="Azkar - أذكار" />
-		<meta
-			property="og:description"
-			content="برنامج سطح مكتب يساعدك على: معرفة مواقيت الصلاة، ظهور إشعارات بذكر او دعاء كل فترة محددة، قراءة أذكار الصباح و المساء مع التذكير بها"
-		/>
-		<meta property="og:image" content="https://azkar-site.web.app/assets/images/og-image.png" />
-		<meta property="og:image:alt" content="Azkar" />
-		<link rel="apple-touch-icon" href="https://azkar-site.web.app/assets/images/apple-touch-icon.png" />
-		<!-- favicon -->
-		<link rel="icon" type="image/svg" href="assets/images/Logo - Circle.svg" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="https://azkar-site.web.app/assets/images/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="https://azkar-site.web.app/assets/images/favicon-16x16.png"
-		/>
-		<link rel="manifest" href="/site.webmanifest" />
-		<meta property="og:image:width" content="256" />
-		<meta property="og:image:height" content="256" />
-		<title>Azkar - أذكار</title>
-		<!-- main CSS -->
-		<link href="assets/css/general.css" rel="stylesheet" />
-		<link href="assets/css/main.css" rel="stylesheet" />
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0E8NJQH92R"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="برنامج سطح مكتب يساعدك على: معرفة مواقيت الصلاة، ظهور إشعارات بذكر او دعاء كل فترة محددة، قراءة أذكار الصباح و المساء مع التذكير بها"
+    />
+    <meta name="author" content="Abdelrahman Bayoumi" />
+    <meta
+      name="keywords"
+      content="Azkar, Azkar App, Desktop App, Azkar Notification, أذكار, برنامج أذكار, برنامج كمبيوتر إسلامي, مواقيت الصلاة, Prayer Times"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Azkar - أذكار" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:locale:alternate" content="ar_AR" />
+    <meta property="og:url" content="https://azkar-site.web.app" />
+    <meta property="og:title" content="Azkar - أذكار" />
+    <meta
+      property="og:description"
+      content="برنامج سطح مكتب يساعدك على: معرفة مواقيت الصلاة، ظهور إشعارات بذكر او دعاء كل فترة محددة، قراءة أذكار الصباح و المساء مع التذكير بها"
+    />
+    <meta property="og:image" content="https://azkar-site.web.app/assets/images/og-image.png" />
+    <meta property="og:image:alt" content="Azkar" />
+    <link
+      rel="apple-touch-icon"
+      href="https://azkar-site.web.app/assets/images/apple-touch-icon.png"
+    />
+    <!-- favicon -->
+    <link rel="icon" type="image/svg" href="assets/images/Logo - Circle.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://azkar-site.web.app/assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://azkar-site.web.app/assets/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:image:width" content="256" />
+    <meta property="og:image:height" content="256" />
+    <title>Azkar - أذكار</title>
+    <!-- main CSS -->
+    <link href="assets/css/general.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0E8NJQH92R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-			gtag('config', 'G-0E8NJQH92R');
-		</script>
-	</head>
+      gtag('config', 'G-0E8NJQH92R');
+    </script>
+  </head>
 
-	<body id="top">
-		<nav class="navbar" dir="rtl">
-			<ul>
-				<li class="navbar-logo" onclick="CustomEvents.navBarLinks('Home');scrollToID('top')">
-					<h1>أذكار</h1>
-				</li>
-				<li class="navbar-toggle">
-					<svg viewBox="0 0 100 80" style="fill: white" width="40" height="30">
-						<rect width="100" height="15"></rect>
-						<rect y="30" width="100" height="15"></rect>
-						<rect y="60" width="100" height="15"></rect>
-					</svg>
-				</li>
-				<li class="navbar-links" onclick="CustomEvents.navBarLinks('features');scrollToID('features')">
-					المميزات
-				</li>
-				<li
-					class="navbar-links animated-border-fill-button"
-					onclick="CustomEvents.navBarLinks('design');window.location.href = '/design'"
-				>
-					تصميمات
-					<svg viewBox="0 0 200 40" fill="none" preserveAspectRatio="none">
-						<rect
-							vector-effect="non-scaling-stroke"
-							x="0.5"
-							y="0.5"
-							width="199"
-							height="39"
-							rx="9.5"
-							stroke="#5296cf"
-							stroke-dasharray="460"
-							stroke-dashoffset="460"
-							stroke-width="3"
-						/>
-					</svg>
-				</li>
-				<li class="navbar-links" onclick="CustomEvents.navBarLinks('contact');scrollToID('contact')">
-					تواصل معنا
-				</li>
-				<li class="navbar-links" style="padding: 5px 10px">
-					<a
-						onclick="CustomEvents.navBarLinks('facebook')"
-						class="hbox justify-content-center"
-						href="https://www.facebook.com/azkar.application"
-						target="_blank"
-					>
-						<img src="assets/images/facebook.svg" alt="facebook" loading="lazy" style="height: 35px" />
-					</a>
-				</li>
-				<li class="navbar-links navbar-img">
-					<a
-						onclick="CustomEvents.navBarLinks('github')"
-						class="hbox justify-content-center"
-						href="https://github.com/AbdelrahmanBayoumi/Azkar-App"
-						target="_blank"
-					>
-						<i class="icon-github"></i>
-					</a>
-				</li>
-				<li
-					class="navbar-links download-button"
-					onclick="CustomEvents.navBarLinks('download');scrollToID('download')"
-					dir="auto"
-				>
-					تحميل
-					<i style="padding-right: 10px; font-size: 25px" class="icon-download"></i>
-				</li>
-				<!-- <li class="navbar-links navbar-img lang">
+  <body id="top">
+    <nav class="navbar" dir="rtl">
+      <ul>
+        <li class="navbar-logo" onclick="CustomEvents.navBarLinks('Home');scrollToID('top')">
+          <h1>أذكار</h1>
+        </li>
+        <li class="navbar-toggle">
+          <svg viewBox="0 0 100 80" style="fill: white" width="40" height="30">
+            <rect width="100" height="15"></rect>
+            <rect y="30" width="100" height="15"></rect>
+            <rect y="60" width="100" height="15"></rect>
+          </svg>
+        </li>
+        <li
+          class="navbar-links"
+          onclick="CustomEvents.navBarLinks('features');scrollToID('features')"
+        >
+          المميزات
+        </li>
+        <li
+          class="navbar-links animated-border-fill-button"
+          onclick="CustomEvents.navBarLinks('design');window.location.href = '/design'"
+        >
+          تصميمات
+          <svg viewBox="0 0 200 40" fill="none" preserveAspectRatio="none">
+            <rect
+              vector-effect="non-scaling-stroke"
+              x="0.5"
+              y="0.5"
+              width="199"
+              height="39"
+              rx="9.5"
+              stroke="#5296cf"
+              stroke-dasharray="460"
+              stroke-dashoffset="460"
+              stroke-width="3"
+            />
+          </svg>
+        </li>
+        <li
+          class="navbar-links"
+          onclick="CustomEvents.navBarLinks('contact');scrollToID('contact')"
+        >
+          تواصل معنا
+        </li>
+        <li class="navbar-links" style="padding: 5px 10px">
+          <a
+            onclick="CustomEvents.navBarLinks('facebook')"
+            class="hbox justify-content-center"
+            href="https://www.facebook.com/azkar.application"
+            target="_blank"
+          >
+            <img
+              src="assets/images/facebook.svg"
+              alt="facebook"
+              loading="lazy"
+              style="height: 35px"
+            />
+          </a>
+        </li>
+        <li class="navbar-links navbar-img">
+          <a
+            onclick="CustomEvents.navBarLinks('github')"
+            class="hbox justify-content-center"
+            href="https://github.com/AbdelrahmanBayoumi/Azkar-App"
+            target="_blank"
+          >
+            <i class="icon-github"></i>
+          </a>
+        </li>
+        <li
+          class="navbar-links download-button"
+          onclick="CustomEvents.navBarLinks('download');scrollToID('download')"
+          dir="auto"
+        >
+          تحميل
+          <i style="padding-right: 10px; font-size: 25px" class="icon-download"></i>
+        </li>
+        <!-- <li class="navbar-links navbar-img lang">
                 <img src="assets/images/world.svg" alt="globe" loading="lazy">
             </li> -->
-			</ul>
-		</nav>
+      </ul>
+    </nav>
 
-		<main>
-			<header>
-				<div class="header-img">
-					<img
-						src="assets/images/programAndNotification01.webp"
-						alt="program & notification"
-						loading="lazy"
-					/>
-				</div>
-				<!-- <div class="download-btn-container">
+    <main>
+      <header>
+        <div class="header-img">
+          <img
+            src="assets/images/programAndNotification01.webp"
+            alt="program & notification"
+            loading="lazy"
+          />
+        </div>
+        <!-- <div class="download-btn-container">
                 <button dir="auto" onclick="scrollToID('download')">
                     تحميل
                     <i style="padding-inline-start: 20px;font-size: 25px;" class="fas fa-download fa-lg"></i>
                 </button>
             </div> -->
-				<div class="header-text" dir="auto">
-					<p>برنامج سطح مكتب يساعدك على</p>
-					<p class="header-feature">
-						<!-- <img src="assets/images/check-circle.svg" alt="check"> -->
-						<i class="icon-check-circle"></i> ظهور إشعارات بذكر او دعاء كل فترة محددة
-					</p>
-					<p class="header-feature">
-						<!-- <img src="assets/images/check-circle.svg" alt="check"> -->
-						<i class="icon-check-circle"></i> معرفة مواقيت الصلاة حسب المنطقة الجغرافية
-					</p>
-					<p class="header-feature">
-						<!-- <img src="assets/images/check-circle.svg" alt="check"> -->
-						<i class="icon-check-circle"></i> قراءة أذكار الصباح والمساء مع التذكير بها
-					</p>
-				</div>
-				<a class="scroll-down-icon" style="cursor: pointer" onclick="scrollToID('features')">
-					<!-- <img src="assets/images/Scroll-Icon.svg" alt="Scroll-Icon" loading="lazy"> -->
-					<i class="icon-arrow-down-circle"></i>
-				</a>
-			</header>
+        <div class="header-text" dir="auto">
+          <p>برنامج سطح مكتب يساعدك على</p>
+          <p class="header-feature">
+            <!-- <img src="assets/images/check-circle.svg" alt="check"> -->
+            <i class="icon-check-circle"></i> ظهور إشعارات بذكر او دعاء كل فترة محددة
+          </p>
+          <p class="header-feature">
+            <!-- <img src="assets/images/check-circle.svg" alt="check"> -->
+            <i class="icon-check-circle"></i> معرفة مواقيت الصلاة حسب المنطقة الجغرافية
+          </p>
+          <p class="header-feature">
+            <!-- <img src="assets/images/check-circle.svg" alt="check"> -->
+            <i class="icon-check-circle"></i> قراءة أذكار الصباح والمساء مع التذكير بها
+          </p>
+        </div>
+        <a class="scroll-down-icon" style="cursor: pointer" onclick="scrollToID('features')">
+          <!-- <img src="assets/images/Scroll-Icon.svg" alt="Scroll-Icon" loading="lazy"> -->
+          <i class="icon-arrow-down-circle"></i>
+        </a>
+      </header>
 
-			<section id="features" class="first-section">
-				<!-- Section Title -->
-				<h2 class="section-title">المميزات</h2>
-				<div class="star-line"><img src="assets/images/Star-Line.svg" alt="Star-Line" loading="lazy" /></div>
-				<!-- Section Content -->
-				<div class="scroll feature-boxs" style="overflow-y: auto; cursor: pointer">
-					<div class="feature-box">
-						<h3 class="feature-title" dir="auto">ظهور إشعارات بذكر او دعاء كل فترة محددة</h3>
-						<img
-							onclick="openImagePopUp(this)"
-							style="width: 100%"
-							src="assets/images/notification-screen.webp"
-							alt="notification-screenshot"
-							loading="lazy"
-						/>
-						<div class="feature-list">
-							<p class="feature-item" dir="auto">
-								<!-- <img class="feature-item-img" src="assets/images/time.svg" alt="time"> -->
-								<i class="icon-clock"></i> إمكانية تعديل الفترة التي يظهر فيها الإشعار
-							</p>
-							<p class="feature-item" dir="auto">
-								<i class="icon-check-circle"></i>
-								<!-- <img class="feature-item-img" src="assets/images/check-circle2.svg" alt="check" loading="lazy"> -->
-								سهولة تغيير مكان ظهور الإشعار
-							</p>
-							<p class="feature-item" dir="auto">
-								<i class="icon-volume"></i>
-								<!-- <img class="feature-item-img" src="assets/images/sound.svg" alt="sound" loading="lazy"> -->
-								إيقاف أو تغيير صوت التنبيه
-							</p>
-							<p class="feature-item" dir="auto">
-								<!-- <img class="feature-item-img" src="assets/images/gear.svg" alt="gear" loading="lazy"> -->
-								<i class="icon-gear"></i> إمكانية إضافة أو حذف أو تعديل الأذكار
-							</p>
-						</div>
-					</div>
-					<div class="feature-box">
-						<h3 class="feature-title" dir="auto">مواقيت الصلاة</h3>
-						<img
-							onclick="openImagePopUp(this)"
-							style="width: 100%"
-							src="assets/images/Program.webp"
-							alt="Home Screen"
-							loading="lazy"
-						/>
-						<div class="feature-list">
-							<p class="feature-item" dir="auto">
-								<!-- <img class="feature-item-img" src="assets/images/location.svg" alt="time" loading="lazy"> -->
-								<i class="icon-location"></i> ضبط المواقيت حسب الموقع الجغرافي
-							</p>
-							<p class="feature-item" dir="auto">
-								<!-- <img class="feature-item-img" src="assets/images/time.svg" alt="check" loading="lazy"> -->
-								<i class="icon-clock"></i> إظهار الوقت المتبقي للصلاة القادمة
-							</p>
-							<p class="feature-item" dir="auto">
-								<!-- <img class="feature-item-img" src="assets/images/sound.svg" alt="sound" loading="lazy"> -->
-								<i class="icon-volume"></i> إيقاف أو تغيير صوت المؤذن
-							</p>
-						</div>
-					</div>
+      <section id="features" class="first-section">
+        <!-- Section Title -->
+        <h2 class="section-title">المميزات</h2>
+        <div class="star-line">
+          <img src="assets/images/Star-Line.svg" alt="Star-Line" loading="lazy" />
+        </div>
+        <!-- Section Content -->
+        <div class="scroll feature-boxs" style="overflow-y: auto; cursor: pointer">
+          <div class="feature-box">
+            <h3 class="feature-title" dir="auto">ظهور إشعارات بذكر او دعاء كل فترة محددة</h3>
+            <img
+              onclick="openImagePopUp(this)"
+              style="width: 100%"
+              src="assets/images/notification-screen.webp"
+              alt="notification-screenshot"
+              loading="lazy"
+            />
+            <div class="feature-list">
+              <p class="feature-item" dir="auto">
+                <!-- <img class="feature-item-img" src="assets/images/time.svg" alt="time"> -->
+                <i class="icon-clock"></i> إمكانية تعديل الفترة التي يظهر فيها الإشعار
+              </p>
+              <p class="feature-item" dir="auto">
+                <i class="icon-check-circle"></i>
+                <!-- <img class="feature-item-img" src="assets/images/check-circle2.svg" alt="check" loading="lazy"> -->
+                سهولة تغيير مكان ظهور الإشعار
+              </p>
+              <p class="feature-item" dir="auto">
+                <i class="icon-volume"></i>
+                <!-- <img class="feature-item-img" src="assets/images/sound.svg" alt="sound" loading="lazy"> -->
+                إيقاف أو تغيير صوت التنبيه
+              </p>
+              <p class="feature-item" dir="auto">
+                <!-- <img class="feature-item-img" src="assets/images/gear.svg" alt="gear" loading="lazy"> -->
+                <i class="icon-gear"></i> إمكانية إضافة أو حذف أو تعديل الأذكار
+              </p>
+            </div>
+          </div>
+          <div class="feature-box">
+            <h3 class="feature-title" dir="auto">مواقيت الصلاة</h3>
+            <img
+              onclick="openImagePopUp(this)"
+              style="width: 100%"
+              src="assets/images/Program.webp"
+              alt="Home Screen"
+              loading="lazy"
+            />
+            <div class="feature-list">
+              <p class="feature-item" dir="auto">
+                <!-- <img class="feature-item-img" src="assets/images/location.svg" alt="time" loading="lazy"> -->
+                <i class="icon-location"></i> ضبط المواقيت حسب الموقع الجغرافي
+              </p>
+              <p class="feature-item" dir="auto">
+                <!-- <img class="feature-item-img" src="assets/images/time.svg" alt="check" loading="lazy"> -->
+                <i class="icon-clock"></i> إظهار الوقت المتبقي للصلاة القادمة
+              </p>
+              <p class="feature-item" dir="auto">
+                <!-- <img class="feature-item-img" src="assets/images/sound.svg" alt="sound" loading="lazy"> -->
+                <i class="icon-volume"></i> إيقاف أو تغيير صوت المؤذن
+              </p>
+            </div>
+          </div>
 
-					<div class="feature-box">
-						<h3 class="feature-title" dir="auto">أذكار الصباح والمساء</h3>
-						<img
-							onclick="openImagePopUp(this)"
-							style="width: 100%"
-							src="assets/images/timedAzkar.webp"
-							alt="Timed Azkar Window"
-							loading="lazy"
-						/>
-						<div class="feature-list">
-							<p class="feature-item" dir="auto">
-								<!-- <img class="feature-item-img" src="assets/images/time.svg" alt="time" loading="lazy"> -->
-								<i class="icon-clock"></i> تفعيل أو إيقاف إشعارات التذكير بهما
-							</p>
-							<p class="feature-item" dir="auto">
-								<!-- <img class="feature-item-img" src="assets/images/sound.svg" alt="check" loading="lazy"> -->
-								<i class="icon-volume"></i> إيقاف أو تغيير صوت التنبيه
-							</p>
-							<p class="feature-item" dir="auto">
-								<!-- <img class="feature-item-img" src="assets/images/gear.svg" alt="sound" loading="lazy"> -->
-								<i class="icon-gear"></i> تكبير وتصغير حجم الخط
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="download">
-				<!-- Section Title -->
-				<h2 class="section-title">تحميل</h2>
-				<div class="star-line"><img src="assets/images/Star-Line.svg" alt="Star-Line" loading="lazy" /></div>
-				<p style="text-align: center" dir="auto">الإصدار رقم: <span id="version">0.0.0</span></p>
-				<div class="download-section">
-					<div class="platform-box">
-						<i style="font-size: 85px; color: #0063c6" class="icon-windows"></i>
-						<p class="platform-name">64-bit Windows</p>
-						<button
-							onclick='openDownloadPopUp("https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/Azkar_windows-x64.exe", "64-bit Windows")'
-						>
-							<i style="padding-right: 10px; font-size: 25px" class="icon-download"></i>
-							Download (64-bit)
-						</button>
-						<p class="number-of-downloads">عدد التحميلات: <span id="win_exe64_counter">0</span></p>
-					</div>
+          <div class="feature-box">
+            <h3 class="feature-title" dir="auto">أذكار الصباح والمساء</h3>
+            <img
+              onclick="openImagePopUp(this)"
+              style="width: 100%"
+              src="assets/images/timedAzkar.webp"
+              alt="Timed Azkar Window"
+              loading="lazy"
+            />
+            <div class="feature-list">
+              <p class="feature-item" dir="auto">
+                <!-- <img class="feature-item-img" src="assets/images/time.svg" alt="time" loading="lazy"> -->
+                <i class="icon-clock"></i> تفعيل أو إيقاف إشعارات التذكير بهما
+              </p>
+              <p class="feature-item" dir="auto">
+                <!-- <img class="feature-item-img" src="assets/images/sound.svg" alt="check" loading="lazy"> -->
+                <i class="icon-volume"></i> إيقاف أو تغيير صوت التنبيه
+              </p>
+              <p class="feature-item" dir="auto">
+                <!-- <img class="feature-item-img" src="assets/images/gear.svg" alt="sound" loading="lazy"> -->
+                <i class="icon-gear"></i> تكبير وتصغير حجم الخط
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="download">
+        <!-- Section Title -->
+        <h2 class="section-title">تحميل</h2>
+        <div class="star-line">
+          <img src="assets/images/Star-Line.svg" alt="Star-Line" loading="lazy" />
+        </div>
+        <p style="text-align: center" dir="auto">الإصدار رقم: <span id="version">0.0.0</span></p>
+        <div class="download-section">
+          <div class="platform-box">
+            <i style="font-size: 85px; color: #0063c6" class="icon-windows"></i>
+            <p class="platform-name">64-bit Windows</p>
+            <button
+              onclick='openDownloadPopUp("https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/Azkar_windows-x64.exe", "64-bit Windows")'
+            >
+              <i style="padding-right: 10px; font-size: 25px" class="icon-download"></i>
+              Download (64-bit)
+            </button>
+            <p class="number-of-downloads">عدد التحميلات: <span id="win_exe64_counter">0</span></p>
+          </div>
 
-					<div class="platform-box">
-						<i style="font-size: 85px; color: #0063c6" class="icon-windows"></i>
-						<p class="platform-name">32-bit Windows</p>
-						<button
-							onclick='openDownloadPopUp("https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/Azkar_windows-x32.exe", "32-bit Windows")'
-						>
-							<i style="padding-right: 10px; font-size: 25px" class="icon-download"></i>
-							Download (32-bit)
-						</button>
-						<p class="number-of-downloads">عدد التحميلات: <span id="win_exe32_counter">0</span></p>
-					</div>
+          <div class="platform-box">
+            <i style="font-size: 85px; color: #0063c6" class="icon-windows"></i>
+            <p class="platform-name">32-bit Windows</p>
+            <button
+              onclick='openDownloadPopUp("https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/Azkar_windows-x32.exe", "32-bit Windows")'
+            >
+              <i style="padding-right: 10px; font-size: 25px" class="icon-download"></i>
+              Download (32-bit)
+            </button>
+            <p class="number-of-downloads">عدد التحميلات: <span id="win_exe32_counter">0</span></p>
+          </div>
 
-					<div class="platform-box">
-						<img src="assets/images/jar.webp" alt="jar" width="85" height="85" loading="lazy" />
-						<!-- <i style="font-size: 85px;color: #0063C6;" class="fab fa-java fa-lg"></i> -->
-						<p class="platform-name">Portable Jar (No JRE) <br /><span>JRE 8 required</span></p>
-						<button
-							onclick='openDownloadPopUp("https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/PortableJar_No-JRE.zip", "Portable Jar (No JRE) <br><span>JRE 8 required</span>")'
-						>
-							<i style="padding-right: 10px; font-size: 25px" class="icon-download"></i>
-							Download (.zip)
-						</button>
-						<p class="number-of-downloads">عدد التحميلات: <span id="jar_counter">0</span></p>
-					</div>
-				</div>
-			</section>
-			<section id="contact">
-				<!-- Section Title -->
-				<h2 class="section-title">تواصل معنا</h2>
-				<div class="star-line"><img src="assets/images/Star-Line.svg" alt="Star-Line" loading="lazy" /></div>
+          <div class="platform-box">
+            <img src="assets/images/jar.webp" alt="jar" width="85" height="85" loading="lazy" />
+            <!-- <i style="font-size: 85px;color: #0063C6;" class="fab fa-java fa-lg"></i> -->
+            <p class="platform-name">Portable Jar (No JRE) <br /><span>JRE 8 required</span></p>
+            <button
+              onclick='openDownloadPopUp("https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/PortableJar_No-JRE.zip", "Portable Jar (No JRE) <br><span>JRE 8 required</span>")'
+            >
+              <i style="padding-right: 10px; font-size: 25px" class="icon-download"></i>
+              Download (.zip)
+            </button>
+            <p class="number-of-downloads">عدد التحميلات: <span id="jar_counter">0</span></p>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <!-- Section Title -->
+        <h2 class="section-title">تواصل معنا</h2>
+        <div class="star-line">
+          <img src="assets/images/Star-Line.svg" alt="Star-Line" loading="lazy" />
+        </div>
 
-				<form>
-					<!-- Success Alert -->
-					<div
-						onclick="hide('successAlert')"
-						style="display: none"
-						id="successAlert"
-						class="alert alert-success"
-						role="alert"
-					>
-						Sent successfully
-						<button type="button" class="close" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<!-- Error Alert -->
-					<div
-						onclick="hide('dangerAlert')"
-						style="display: none"
-						id="dangerAlert"
-						class="alert alert-danger"
-						role="alert"
-					>
-						Can't Send Your Response
-						<button type="button" class="close" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<!-- Form Content -->
-					<div class="form-group">
-						<label for="name"> Name<span class="required-star"> *</span> </label>
-						<input class="form-control" type="text" id="name" name="name" />
-					</div>
-					<div class="form-group">
-						<label for="email"> Email<span class="required-star"> *</span> </label>
-						<input class="form-control" type="email" id="email" name="email" />
-					</div>
-					<div class="form-group">
-						<label for="message"> Message<span class="required-star"> *</span> </label>
-						<textarea class="form-control" id="message" name="message" dir="auto" rows="6"></textarea>
-					</div>
-					<div><button class="btn btn-primary btn-block" type="submit">Send</button></div>
-				</form>
-			</section>
-		</main>
+        <form>
+          <!-- Success Alert -->
+          <div
+            onclick="hide('successAlert')"
+            style="display: none"
+            id="successAlert"
+            class="alert alert-success"
+            role="alert"
+          >
+            Sent successfully
+            <button type="button" class="close" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!-- Error Alert -->
+          <div
+            onclick="hide('dangerAlert')"
+            style="display: none"
+            id="dangerAlert"
+            class="alert alert-danger"
+            role="alert"
+          >
+            Can't Send Your Response
+            <button type="button" class="close" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <!-- Form Content -->
+          <div class="form-group">
+            <label for="name"> Name<span class="required-star"> *</span> </label>
+            <input class="form-control" type="text" id="name" name="name" />
+          </div>
+          <div class="form-group">
+            <label for="email"> Email<span class="required-star"> *</span> </label>
+            <input class="form-control" type="email" id="email" name="email" />
+          </div>
+          <div class="form-group">
+            <label for="message"> Message<span class="required-star"> *</span> </label>
+            <textarea
+              class="form-control"
+              id="message"
+              name="message"
+              dir="auto"
+              rows="6"
+            ></textarea>
+          </div>
+          <div><button class="btn btn-primary btn-block" type="submit">Send</button></div>
+        </form>
+      </section>
+    </main>
 
-		<footer>
-			<span>© 2025 Azkar</span>
-		</footer>
+    <footer>
+      <span>© 2025 Azkar</span>
+    </footer>
 
-		<!-- The Modal -->
-		<div id="modal" class="modal">
-			<span id="closeModelButton" class="close">&times;</span>
-			<img class="modal-content" id="modalImg" />
-			<div id="caption"></div>
-		</div>
+    <!-- The Modal -->
+    <div id="modal" class="modal">
+      <span id="closeModelButton" class="close">&times;</span>
+      <img class="modal-content" id="modalImg" />
+      <div id="caption"></div>
+    </div>
 
-		<!-- The Modal -->
-		<div id="downloadModal" class="modal">
-			<span id="closeDownloadModelButton" class="close">&times;</span>
-			<div id="downloadModalContent">
-				<h2 id="downloadVersionValue" style="text-align: center">64-bit Windows</h2>
-				<p dir="rtl">سيبدأ التحميل خلال ثوانٍ..</p>
-				<div class="slide-progress-bar">
-					<div class="progress-bar" id="progress-bar"></div>
-					<!--progress-bar-->
-				</div>
-				<!-- <button onclick="progressBar()">Start</button> -->
-				<!--slide-progress-bar-->
-			</div>
-		</div>
+    <!-- The Modal -->
+    <div id="downloadModal" class="modal">
+      <span id="closeDownloadModelButton" class="close">&times;</span>
+      <div id="downloadModalContent">
+        <h2 id="downloadVersionValue" style="text-align: center">64-bit Windows</h2>
+        <p dir="rtl">سيبدأ التحميل خلال ثوانٍ..</p>
+        <div class="slide-progress-bar">
+          <div class="progress-bar" id="progress-bar"></div>
+          <!--progress-bar-->
+        </div>
+        <!-- <button onclick="progressBar()">Start</button> -->
+        <!--slide-progress-bar-->
+      </div>
+    </div>
 
-		<script src="assets/js/general.js"></script>
-		<script src="assets/js/main.js"></script>
-	</body>
+    <script src="assets/js/general.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

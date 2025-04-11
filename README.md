@@ -8,16 +8,16 @@
 
 You can download Azkar from the following links:
 
--   **64-bit Windows:** https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/Azkar_windows-x64.exe
--   **32-bit Windows:** https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/Azkar_windows-x32.exe
--   **Portable Jar (No JRE):** https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/PortableJar_No-JRE.zip
+- **64-bit Windows:** https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/Azkar_windows-x64.exe
+- **32-bit Windows:** https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/Azkar_windows-x32.exe
+- **Portable Jar (No JRE):** https://github.com/AbdelrahmanBayoumi/Azkar-App/releases/latest/download/PortableJar_No-JRE.zip
 
 ## Contact
 
 If you have any questions or feedback, please contact us at:
 
--   **Email:** azkar.application@gmail.com
--   **Facebook:** https://www.facebook.com/azkar.application
+- **Email:** azkar.application@gmail.com
+- **Facebook:** https://www.facebook.com/azkar.application
 
 ## License
 
@@ -25,5 +25,5 @@ Azkar is released under the MIT License.
 
 ## Credits
 
--   **Author:** Abdelrahman Bayoumi
--   **Website:** https://abdelrahmanbayoumi.github.io
+- **Author:** Abdelrahman Bayoumi
+- **Website:** https://abdelrahmanbayoumi.github.io
