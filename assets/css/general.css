@@ -208,6 +208,10 @@ body {
 	justify-content: center;
 }
 
+.align-items-center {
+	align-items: center;
+}
+
 .g-10 {
 	gap: 10px;
 }
