@@ -44,7 +44,7 @@
     />
     <link rel="manifest" href="/site.webmanifest" />
     <title>Azkar - Usage Data</title>
-    <!-- main CSS (حسب الترتيب والتنظيم عندك) -->
+
     <link href="../../assets/css/general.css" rel="stylesheet" />
     <link href="../../assets/css/design.css" rel="stylesheet" />
     <style>
@@ -91,7 +91,12 @@
         >
           تواصل معنا
         </li>
-        <li class="navbar-links" onclick="window.location.href = '/design'">تصميمات</li>
+        <li
+          class="navbar-links"
+          onclick="CustomEvents.navBarLinks('design');window.location.href = '/design'"
+        >
+          تصميمات
+        </li>
         <li class="navbar-links" style="padding: 5px 10px">
           <a
             onclick="CustomEvents.navBarLinks('facebook')"
