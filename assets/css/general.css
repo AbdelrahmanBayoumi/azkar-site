@@ -380,6 +380,21 @@ footer {
   width: 100%;
   text-align: center;
   text-transform: uppercase;
+
+  .footer-links {
+    a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: all ease 0.3s;
+
+      &:hover {
+        background-color: var(--light-blue);
+        color: #fff;
+      }
+    }
+  }
 }
 
 /* --- popup modal --- */
