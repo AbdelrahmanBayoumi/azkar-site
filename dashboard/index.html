@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="لوحة التحكم لتطبيق أذكار - احصائيات استخدام التطبيق ومتابعة نشاط المستخدم."
+    />
+    <meta name="author" content="Azkar App" />
+    <meta
+      name="keywords"
+      content="Azkar Dashboard, Azkar Usage, Azkar App Stats, برنامج أذكار, احصائيات أذكار, لوحة تحكم, Azkar App, Prayer Times, Islamic App"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Azkar - Dashboard" />
+    <meta property="og:locale" content="ar_AR" />
+    <meta property="og:title" content="Azkar - لوحة التحكم" />
+    <meta
+      property="og:description"
+      content="صفحة احصائيات لتطبيق أذكار توضح بيانات استخدام التطبيق ونشاط المستخدم."
+    />
+    <meta property="og:image" content="https://azkar-site.web.app/assets/images/og-image.png" />
+    <meta property="og:image:alt" content="Azkar Dashboard" />
+
+    <link
+      rel="apple-touch-icon"
+      href="https://azkar-site.web.app/assets/images/apple-touch-icon.png"
+    />
+    <link rel="icon" type="image/svg" href="../assets/images/Logo - Circle.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://azkar-site.web.app/assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://azkar-site.web.app/assets/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Azkar - Dashboard</title>
+
+    <!-- main CSS (adjust as needed) -->
+    <link href="../assets/css/general.css" rel="stylesheet" />
+    <link href="../assets/css/design.css" rel="stylesheet" />
+
+    <style>
+      h3 {
+        margin-top: 20px;
+      }
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0E8NJQH92R"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-0E8NJQH92R');
+    </script>
+  </head>
+
+  <body id="top">
+    <!-- Navbar (Arabic) -->
+    <nav class="navbar" dir="rtl">
+      <ul>
+        <li class="navbar-logo" onclick="CustomEvents.navBarLinks('Home');location.href = '/'">
+          <h1>أذكار</h1>
+        </li>
+        <li class="navbar-toggle">
+          <svg viewBox="0 0 100 80" style="fill: white" width="40" height="30">
+            <rect width="100" height="15"></rect>
+            <rect y="30" width="100" height="15"></rect>
+            <rect y="60" width="100" height="15"></rect>
+          </svg>
+        </li>
+        <li class="navbar-links" onclick="CustomEvents.navBarLinks('Home');location.href = '/'">
+          الصفحة الرئيسية
+        </li>
+        <li
+          class="navbar-links"
+          onclick="CustomEvents.navBarLinks('Home#contact');window.location.href = '/#contact'"
+        >
+          تواصل معنا
+        </li>
+        <li
+          class="navbar-links"
+          onclick="CustomEvents.navBarLinks('design');window.location.href = '/design'"
+        >
+          تصميمات
+        </li>
+        <li class="navbar-links" style="padding: 5px 10px">
+          <a
+            onclick="CustomEvents.navBarLinks('facebook')"
+            href="https://www.facebook.com/azkar.application"
+            target="_blank"
+            class="hbox justify-content-center"
+          >
+            <img
+              src="../assets/images/facebook.svg"
+              alt="facebook"
+              loading="lazy"
+              style="height: 35px"
+            />
+          </a>
+        </li>
+        <li class="navbar-links navbar-img">
+          <a
+            onclick="CustomEvents.navBarLinks('github')"
+            href="https://github.com/AbdelrahmanBayoumi/Azkar-App"
+            target="_blank"
+            class="hbox justify-content-center"
+          >
+            <i class="icon-github"></i>
+          </a>
+        </li>
+        <li
+          class="navbar-links download-button"
+          onclick="CustomEvents.navBarLinks('download');window.location.href = '/#download'"
+        >
+          تحميل
+          <i style="padding-right: 10px; font-size: 25px" class="icon-download"></i>
+        </li>
+      </ul>
+    </nav>
+
+    <header>
+      <h2 style="text-align: center; margin: 20px 0" dir="auto">Dashboard - لوحة التحكم</h2>
+    </header>
+
+    <main style="max-width: 900px; margin: 0 auto; padding: 0 20px">
+      <h3 style="text-align: center">Coming Soon...</h3>
+      <h3 style="text-align: center" dir="rtl">قريبا...</h3>
+    </main>
+
+    <script src="../assets/js/general.js"></script>
+  </body>
+</html>
