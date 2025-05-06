@@ -31,7 +31,7 @@ slider.addEventListener('mousemove', (e) => {
 /*
 ------------------------- Download Section -----------------------
 */
-const versionNumber = '1.2.9';
+const versionNumber = '1.3.0';
 document.getElementById('version').innerText = versionNumber;
 
 /**
