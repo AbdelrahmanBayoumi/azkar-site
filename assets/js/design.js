@@ -33,7 +33,7 @@ function handlePosts(tagChoosen) {
 
 function getTitle(title) {
   if (title || title !== '') {
-    return `<h3>${title}</h2>`;
+    return `<h3>${title}</h3>`;
   } else {
     return '';
   }

@@ -89,7 +89,7 @@ function addBlock() {
 
 function getTitle(title) {
   if (title || title != '') {
-    return `<h3 dir="auto">📌 ${title}</h3>`;
+    return `<h2 dir="auto">📌 ${title}</h2>`;
   } else {
     return '';
   }
