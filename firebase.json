@@ -1,6 +1,13 @@
 {
   "hosting": {
     "public": ".",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "redirects": [
+      {
+        "source": "/dashboard{,/**}",
+        "destination": "https://azkar-web-dashboard.vercel.app/",
+        "type": 301
+      }
+    ]
   }
 }
