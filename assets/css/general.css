@@ -291,7 +291,8 @@ body {
   cursor: pointer;
 }
 
-.navbar-logo h1 {
+.navbar-logo .site-logo {
+  display: inline-block;
   font-size: 2rem;
 }
 
