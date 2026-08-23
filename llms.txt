@@ -1,0 +1,25 @@
+# Azkar - أذكار
+
+Azkar is a desktop application website for an app that helps users view prayer times, receive periodic Azkar or Dua notifications, and read morning and evening Azkar with reminders.
+
+## Important Pages
+
+- [Home](https://azkar-site.web.app/): Product overview, app features, download links, and contact form.
+- [Designs](https://azkar-site.web.app/design/): Islamic designs including Quran verses, prophetic Sunnah, Hadith, and Arabic quotes.
+- [فضل الصلاة على النبي ﷺ](https://azkar-site.web.app/design/فضل_الصلاة_على_النبي/): Hadith and designs about the virtue of sending prayers upon the Prophet ﷺ.
+- [سنن المطر والريح](https://azkar-site.web.app/design/rainAndWindSunnah/): Sunnah supplications for thunder, wind, and rain with downloadable designs.
+- [Usage Data](https://azkar-site.web.app/desktop/usage-data/): How Azkar Desktop collects and uses technical usage data.
+- [Privacy Policy](https://azkar-site.web.app/policies/privacy-policy/): How the website and desktop application collect, use, and protect data.
+- [Terms of Use](https://azkar-site.web.app/policies/terms-of-use/): Terms for using the Azkar website and desktop application.
+
+## Contact
+
+- Email: azkar.application@gmail.com
+- Contact form: https://azkar-site.web.app/#contact
+- GitHub: https://github.com/AbdelrahmanBayoumi/Azkar-App
+
+## Notes for LLMs and Crawlers
+
+- Canonical public pages use trailing slash URLs.
+- Do not treat `/dashboard/`, `/tools/`, search URLs, parameterized URLs, or generated asset URLs as primary content pages.
+- There is no pricing page listed on this site.
