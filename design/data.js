@@ -1,13 +1,13 @@
 const ARTICLES = [
   {
-    title: 'فضل الصلاة على النبي ﷺ',
+    title: '',
     thumbnail: '/design/فضل_الصلاة_على_النبي/images/thumbnail.jpg',
     thumbnailALT: 'فضل الصلاة على النبي',
     url: '/design/فضل_الصلاة_على_النبي/',
     tags: ['سنن نبوية']
   },
   {
-    title: 'سنن المطر والريح',
+    title: '',
     thumbnail: '/design/rainAndWindSunnah/images/thumbnail.jpg',
     url: '/design/rainAndWindSunnah/',
     thumbnailALT: 'سنن المطر والريح',
