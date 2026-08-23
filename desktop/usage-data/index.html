@@ -12,11 +12,14 @@
       content="Azkar, Azkar App, Desktop App, أذكار, برنامج أذكار, برنامج كمبيوتر إسلامي, مواقيت الصلاة, Prayer Times, Usage Data, Data Collection"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://azkar-site.web.app/desktop/usage-data/" />
+    <meta name="robots" content="index, follow" />
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Azkar - Usage Data" />
     <meta property="og:locale" content="ar_AR" />
+    <meta property="og:url" content="https://azkar-site.web.app/desktop/usage-data/" />
     <meta property="og:title" content="Azkar - Usage Data" />
     <meta
       property="og:description"
@@ -24,6 +27,13 @@
     />
     <meta property="og:image" content="https://azkar-site.web.app/assets/images/og-image.png" />
     <meta property="og:image:alt" content="Azkar Usage Data" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Azkar - Usage Data" />
+    <meta
+      name="twitter:description"
+      content="تعرف على آلية جمع بيانات الاستخدام في برنامج أذكار (سطح المكتب)."
+    />
+    <meta name="twitter:image" content="https://azkar-site.web.app/assets/images/og-image.png" />
 
     <link
       rel="apple-touch-icon"
@@ -46,6 +56,35 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <title>Azkar - Usage Data</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://azkar-site.web.app/desktop/usage-data/#faq",
+        "url": "https://azkar-site.web.app/desktop/usage-data/",
+        "name": "Azkar - Usage Data",
+        "description": "تعرف على آلية جمع بيانات الاستخدام في برنامج أذكار (سطح المكتب).",
+        "inLanguage": ["ar", "en"],
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "هل يتم جمع معلومات شخصية؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "لا. لا نجمع أي معلومات تحدد هويتك مثل الاسم أو البريد الإلكتروني أو أي بيانات مالية."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "هل يمكنني إيقاف جمع البيانات؟",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "يوفر التطبيق خيارًا في الإعدادات تحت اسم مشاركة بيانات الاستخدام، ويمكنك تعطيله في أي وقت."
+            }
+          }
+        ]
+      }
+    </script>
 
     <link href="../../assets/css/general.css" rel="stylesheet" />
     <link href="../../assets/css/design.css" rel="stylesheet" />
@@ -76,7 +115,7 @@
     <nav class="navbar" dir="rtl">
       <ul>
         <li class="navbar-logo" onclick="CustomEvents.navBarLinks('Home');location.href = '/'">
-          <h1>أذكار</h1>
+          <span class="site-logo">أذكار</span>
         </li>
         <li class="navbar-toggle">
           <svg viewBox="0 0 100 80" style="fill: white" width="40" height="30">
@@ -136,7 +175,7 @@
     </nav>
 
     <header>
-      <h2 style="text-align: center; margin: 20px 0" dir="auto">بيانات الاستخدام - Usage Data</h2>
+      <h1 style="text-align: center; margin: 20px 0" dir="auto">بيانات الاستخدام - Usage Data</h1>
     </header>
 
     <main style="max-width: 900px; margin: 0 auto; padding: 0 20px">
