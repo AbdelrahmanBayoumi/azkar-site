@@ -31,28 +31,39 @@ slider.addEventListener('mousemove', (e) => {
 /*
 ------------------------- Download Section -----------------------
 */
-const versionNumber = '1.3.0';
-document.getElementById('version').innerText = versionNumber;
+/**
+ * Update version label with the latest release tag.
+ * The static HTML value stays as fallback for crawlers and API outages.
+ * @param {Array} releases: list of GitHub releases, newest first
+ */
+function initLatestVersion(releases) {
+  if (!releases.length || !releases[0].tag_name) {
+    return;
+  }
+  document.getElementById('version').innerText = releases[0].tag_name;
+}
 
 /**
  * Fetch Github Repo Release Data
+ * @returns list of releases, or empty list when the API is unreachable
  */
 async function getReleasesData(user, repo) {
   try {
-    const result = await fetch(
+    const res = await fetch(
       `https://api.github.com/repos/${user}/${repo}/releases?page=1&per_page=5`,
       {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' }
       }
-    ).then((res) => res.json());
-    return new Promise(function (resolve, reject) {
-      resolve(result);
-    });
+    );
+    if (!res.ok) {
+      return [];
+    }
+    const result = await res.json();
+    return Array.isArray(result) ? result : [];
   } catch (error) {
-    return new Promise(function (resolve, reject) {
-      reject(error);
-    });
+    console.log('error:', error);
+    return [];
   }
 }
 
@@ -88,34 +99,6 @@ function initReleaseData(result) {
       }
     );
   }
-}
-
-/**
- * GET number of downloads for specific VersionNumber
- * @param {string} version
- */
-function initNumberOfDownloads(version) {
-  fetch('https://api.github.com/repos/AbdelrahmanBayoumi/Azkar-App/releases/tags/' + version)
-    .then((result) => result.json())
-    .then((json) => {
-      json.assets.forEach((asset) => {
-        if (asset.name.indexOf('32') !== -1) {
-          document.getElementById('win_exe32_counter').innerText = asset.download_count;
-        } else if (asset.name.indexOf('64') !== -1) {
-          document.getElementById('win_exe64_counter').innerText = asset.download_count;
-        } else if (asset.name.indexOf('Jar') !== -1) {
-          document.getElementById('jar_counter').innerText = asset.download_count;
-        }
-      });
-      if (json.assets) {
-        Array.from(document.getElementsByClassName('number-of-downloads')).forEach(
-          (element, index, array) => {
-            element.style.display = 'inline';
-          }
-        );
-      }
-    })
-    .catch((error) => console.log('error', error));
 }
 
 /*
@@ -192,9 +175,12 @@ function submit(name, email, message) {
  * When Document loading is finished
  */
 window.onload = () => {
-  // fetch number of downloads for each platform
+  // fetch release data for download counters and latest version
   getReleasesData('AbdelrahmanBayoumi', 'Azkar-App')
-    .then((result) => initReleaseData(result))
+    .then((result) => {
+      initReleaseData(result);
+      initLatestVersion(result);
+    })
     .catch((error) => console.log('error:', error));
 
   // add action when form is submitted
