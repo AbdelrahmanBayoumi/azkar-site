@@ -57,16 +57,13 @@ async function getReleasesData(user, repo) {
 }
 
 function initReleaseData(result) {
-  // console.log("initReleaseData: ", result);
   let total64bit = 0;
   let total32bit = 0;
   let totaljar = 0;
 
   result.forEach((item) => {
     if (item.assets.length) {
-      console.log('------', item.name, '------');
       item.assets.forEach((asset) => {
-        console.log('Name:', asset.name, ', Number of Downlads:', asset.download_count);
         if (asset.name.indexOf('64') !== -1) {
           total64bit += asset.download_count;
         }
@@ -79,10 +76,6 @@ function initReleaseData(result) {
       });
     }
   });
-  console.log('------ Total ------');
-  console.log('total64bit: ' + total64bit);
-  console.log('total32bit: ' + total32bit);
-  console.log('totaljar: ' + totaljar);
 
   document.getElementById('win_exe64_counter').innerText = total64bit;
   document.getElementById('win_exe32_counter').innerText = total32bit;
@@ -105,7 +98,6 @@ function initNumberOfDownloads(version) {
   fetch('https://api.github.com/repos/AbdelrahmanBayoumi/Azkar-App/releases/tags/' + version)
     .then((result) => result.json())
     .then((json) => {
-      // console.log("data:", data);
       json.assets.forEach((asset) => {
         if (asset.name.indexOf('32') !== -1) {
           document.getElementById('win_exe32_counter').innerText = asset.download_count;
@@ -114,7 +106,6 @@ function initNumberOfDownloads(version) {
         } else if (asset.name.indexOf('Jar') !== -1) {
           document.getElementById('jar_counter').innerText = asset.download_count;
         }
-        console.log('Name:', asset.name, ', Number of Downlads:', asset.download_count);
       });
       if (json.assets) {
         Array.from(document.getElementsByClassName('number-of-downloads')).forEach(
@@ -201,7 +192,6 @@ function submit(name, email, message) {
  * When Document loading is finished
  */
 window.onload = () => {
-  console.log(`is 64-bit OS => ${is64Bit()}`);
   // fetch number of downloads for each platform
   getReleasesData('AbdelrahmanBayoumi', 'Azkar-App')
     .then((result) => initReleaseData(result))
@@ -275,7 +265,6 @@ function openDownloadPopUp(url, version) {
   downloadModal.style.display = 'block';
   document.getElementById('downloadVersionValue').innerHTML = version;
   progressBar(() => {
-    console.log(version);
     CustomEvents.waitedForRelease(version);
     window.open(url, '_self');
   });
