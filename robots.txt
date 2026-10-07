@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /tools/
 
 Sitemap: https://azkar-site.web.app/sitemap.xml

@@ -12,6 +12,10 @@ toggleButton.addEventListener('click', () => {
 /*
 ------------------------- General Functions ------------------------
 */
+const copyrightYear = document.getElementById('year');
+if (copyrightYear) {
+  copyrightYear.textContent = new Date().getFullYear();
+}
 /**
  * scroll to specific id in DOM
  * @param {string} id: element id in DOM
@@ -26,14 +30,6 @@ function scrollToID(id) {
  */
 function hide(id) {
   document.getElementById(id).style.display = 'none';
-}
-
-/**
- * check if OS if 64-bit or not
- * @returns true if the OS is 64-bit and false otherwise
- */
-function is64Bit() {
-  return navigator.userAgent.indexOf('WOW64') != -1 || navigator.userAgent.indexOf('Win64') != -1;
 }
 
 /**
